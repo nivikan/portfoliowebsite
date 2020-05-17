@@ -1107,6 +1107,31 @@ html.tablet .orientationCircleAnim {
 
 }
 
+.item1{
+	background-image:url(../assets/img/portfolio/gallery/GBWorld.png);
+}
+.item2{
+	background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs.png);
+}
+.item3{
+	background-image:url(../assets/img/portfolio/gallery/scaryStories.png);
+}
+.item4{
+	background-image:url(../assets/img/portfolio/gallery/GBFranchise.png);
+}
+.item5{
+	background-image:url(../assets/img/portfolio/gallery/dollface.png);
+}
+.item6{
+	background-image:url(../assets/img/portfolio/gallery/theGreat.png);
+}
+.item7{
+	background-image:url(../assets/img/portfolio/gallery/PPG.png);
+}
+.item8{
+	background-image:url(../assets/img/portfolio/gallery/christmasChronicles.png);
+}
+
 .galleryItemOverlayInfo{
 	width: 100%;
 	height: 100%;
