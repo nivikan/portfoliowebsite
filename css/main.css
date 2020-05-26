@@ -1372,6 +1372,7 @@ html.tablet .orientationCircleAnim {
 	transition: transform 0.3s;
 	transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.8);
 	transition-duration: 0.3s;
+	pointer-events: none;
 }
 
 .frontPortfolioPanel{

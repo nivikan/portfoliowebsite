@@ -16,6 +16,7 @@ var app = {
 	isFooterUp: false,
 	collectedCoins: 0,
 	homeSliderNumber:1,
+	frontPanelOn: false,
 
 
 	prePreload: function() {
@@ -190,7 +191,7 @@ var app = {
 				"init+=.80"
 			)
 			.fromTo(
-				".endPHONE",
+				".endBE",
 				0.3,
 				{ y:10,opacity: 0 },
 				{ y:0,opacity: 1, ease: Back.easeIn },
@@ -625,6 +626,7 @@ var app = {
 		app.bindWindowFocusEvent();
 
 		$("#js-frontPortfolioPanelExit").on("click", app.hideFrontPortfolioPanel);
+		$("#js-darkenPage").on("click", app.hideFrontPortfolioPanel);
 		
 		$("#js-homePrevButton").on("click", app.homeSliderPrev);
 		$("#js-nextNivethaInfo").on("click", app.nextNivethaInfo);
@@ -713,7 +715,7 @@ var app = {
 
 	openGalleryItem4: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/85993325/SONY-Ghostbusters-Giphy-Stickers?iframe=1";
+		frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
 		app.showFrontPortfolioPanel();
 		// $("#js-frontPortfolioPanel1").removeClass("hidden");
 
@@ -721,7 +723,7 @@ var app = {
 
 	openGalleryItem5: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
+		frontPanel.src= "https://www.behance.net/gallery/97733623/HULU-Dollface-Launch-Campaign?iframe=1";
 		app.showFrontPortfolioPanel();
 		// $("#js-frontPortfolioPanel1").removeClass("hidden");
 
@@ -737,7 +739,7 @@ var app = {
 
 	openGalleryItem7: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/79195581/CARTOON-NETWORK-PPG-Premiere-Party-Invite?iframe=1";
+		frontPanel.src= "https://www.behance.net/gallery/79195581/CARTOON-NETWORK-PPG-2016-Launch-Campaign?iframe=1";
 		app.showFrontPortfolioPanel();
 		// $("#js-frontPortfolioPanel1").removeClass("hidden");
 
@@ -755,24 +757,36 @@ var app = {
 		$("#js-frontPortfolioPanelExit").removeClass("hidden");
 		$("#js-frontPortfolioPanel1").removeClass("hidden");
 		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
 		console.log("Showing Front Portfolio Panel");
+		app.frontPanelOn = true;
 	},
 
 	hideFrontPortfolioPanel(){
-		$("#js-frontPortfolioPanelExit").addClass("hidden");
 
-		$("#js-frontPortfolioPanel1").addClass("hidden");
-		$("#js-frontPortfolioPanel2").addClass("hidden");
-		$("#js-frontPortfolioPanel3").addClass("hidden");
-		$("#js-frontPortfolioPanel4").addClass("hidden");
-		$("#js-frontPortfolioPanel5").addClass("hidden");
-		$("#js-frontPortfolioPanel6").addClass("hidden");
-		$("#js-frontPortfolioPanel7").addClass("hidden");
-		$("#js-frontPortfolioPanel8").addClass("hidden");
+		if ( app.frontPanelOn == false ){
+			console.log ("Front not on");
+		}
+		else{
+			$("#js-frontPortfolioPanelExit").addClass("hidden");
+
+			$("#js-frontPortfolioPanel1").addClass("hidden");
+			$("#js-frontPortfolioPanel2").addClass("hidden");
+			$("#js-frontPortfolioPanel3").addClass("hidden");
+			$("#js-frontPortfolioPanel4").addClass("hidden");
+			$("#js-frontPortfolioPanel5").addClass("hidden");
+			$("#js-frontPortfolioPanel6").addClass("hidden");
+			$("#js-frontPortfolioPanel7").addClass("hidden");
+			$("#js-frontPortfolioPanel8").addClass("hidden");
 
 
-		document.getElementById("js-darkenPage").style.opacity = "0";
-		console.log("Hiding Front Portfolio Panel");
+			document.getElementById("js-darkenPage").style.opacity = "0";
+			document.getElementById("js-darkenPage").style.pointerEvents = "none";
+			console.log("Hiding Front Portfolio Panel");
+			app.frontPanelOn = false;
+
+		}
+		
 
 
 	},
