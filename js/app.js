@@ -4,6 +4,7 @@ var homeSlide3 = document.getElementById("js-homeSlideThree");
 var prevScrollLeft = 0;
 var frontPanel = document.getElementById("js-frontPaneliFrame");
 
+
 var app = {
 	playGame: false,
 	skipVideos: false,
@@ -17,6 +18,7 @@ var app = {
 	collectedCoins: 0,
 	homeSliderNumber:1,
 	frontPanelOn: false,
+	isMobile:false,
 
 
 	prePreload: function() {
@@ -40,6 +42,7 @@ var app = {
 
 	preIntroPreload: function() {
 		app.initEvents(); //This Calls Scolling function that makes horizontal scroll happen
+		console.log("this is the Browser name: "+ window.navigator.appCodeName);
 		console.log("START");
 		app.introPreload();
 	},
@@ -557,6 +560,11 @@ var app = {
 
 	initEvents: function() {
 
+		if (Detectizr.device.type == "mobile"  || Detectizr.device.type == "tablet") {
+			isMobile=true;
+			console.log ("this is a mobile device");
+		}
+
 		//CHANGE THE SITE'S SCROLL DIRECTION
 
 		var item = document.getElementsByClassName('screens')[0];
@@ -570,11 +578,14 @@ var app = {
 
 				if (e.deltaY > 0) {
 					document.documentElement.scrollLeft += 100;
+					//document.documentElement.scrollTop=0;
+					console.log("the scroll top is " + document.documentElement.scrollTop);
 				}
 				else {
 					document.documentElement.scrollLeft -= 100;
+					//document.documentElement.scrollTop=0;
+					console.log("the scroll top is " + document.documentElement.scrollTop);
 				}
-
 				if ((document.documentElement.scrollLeft >= 1300) && (prevScrollLeft < 1300)){
 					app.introEndScreenAnim();
 				}
@@ -651,25 +662,31 @@ var app = {
 
 
 		///ORIENTATION EVENT TO PAUSE GAME
-		window.addEventListener("orientationchange", function() {
-			if (Detectizr.device.type == "mobile") {
-				if (window.orientation == 90 || window.orientation == 275) {
-			
-				}
-				if (window.orientation == 0 || window.orientation == 180) {
-					
-				}
-			}
+		// window.addEventListener("orientationchange", function() {
+		// 	if (Detectizr.device.type == "mobile") {
+		// 		isMobile=true;
+		// 		console.log ("this is a mobile device");
 
-			if (Detectizr.device.type == "tablet") {
-				if (window.orientation == 90 || window.orientation == 275) {
-				
-				}
-				if (window.orientation == 0 || window.orientation == 180) {
+		// 		if (window.orientation == 90 || window.orientation == 275) {
+			
+		// 		}
+		// 		if (window.orientation == 0 || window.orientation == 180) {
 					
-				}
-			}
-		});
+		// 		}
+		// 	}
+
+		// 	if (Detectizr.device.type == "tablet") {
+		// 		isMobile=true; 
+		// 		console.log ("this is a mobile device");
+
+		// 		if (window.orientation == 90 || window.orientation == 275) {
+				
+		// 		}
+		// 		if (window.orientation == 0 || window.orientation == 180) {
+					
+		// 		}
+		// 	}
+		// });
 	},
 
 	consoleLogStuff: function() {
@@ -793,100 +810,6 @@ var app = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	showHomePage: function() {
-		app.hideAllScreens();
-		$("#js-mainHome-screen").removeClass("hidden");
-		console.log("Showing home page");
-		TweenLite.fromTo(document.getElementById("js-home-screen"), .5, {transform: "translate(0px,50px)", opcity:"0"}, {transform: "translate(0px)", opacity:"1"}, "start");
-
-	},
-
-	showPortfolioPage: function() {
-		app.hideAllScreens();
-		$("#js-portfolio-screen").removeClass("hidden");
-		console.log("Showing Portfolio page");
-		TweenLite.fromTo(document.getElementById("js-portfolio-screen"), .5, {transform: "translate(0px,50px)", opcity:"0"}, {transform: "translate(0px)", opacity:"1"}, "start");
-
-	},
-
-	showAboutPage: function() {
-		app.hideAllScreens();
-		$("#js-about-screen").removeClass("hidden");
-		console.log("Showing About page");
-		
-	},
-
-	showXmasChronPage: function() {
-		app.hideAllScreens();
-		$("#js-XmasChron-screen").removeClass("hidden");
-		console.log("Showing Xmas Chron Project page");
-		TweenLite.fromTo(document.getElementById("js-XmasChron-screen"), .5, {transform: "translate(0px,50px)", opcity:"0"}, {transform: "translate(0px)", opacity:"1"}, "start");
-
-	},
-
-	hideAllScreens: function(){
-		$("#js-mainHome-screen").addClass("hidden");
-		$("#js-portfolio-screen").addClass("hidden");
-		$("#js-about-screen").addClass("hidden");
-
-		//Projects
-		$("#js-XmasChron-screen").addClass("hidden");
-	},
-
-	homeSliderNext: function(){
-		console.log("Next button Hit!");
-		if (app.homeSliderNumber == 1){
-
-			homeSlide2.style.display = "block";
-			homeSlide1.style.display = "none";
-
-			app.homeSliderNumber++;
-
-			var tl = new TimelineMax() ;
-			tl.fromTo(homeSlide1, .5, {transform: "translate(0px)", opcity:1}, {transform: "translate(-50px)", opacity:0}, "start");
-			tl.fromTo(homeSlide2, .5, {transform: "translate(50px)", opacity:0 }, {transform: "translate(0px,0px)", opacity:1}, "start");
-
-		}
-		else if (app.homeSliderNumber == 2){
-			homeSlide2.style.display = "none";
-			homeSlide3.style.display = "block";
-
-			app.homeSliderNumber++;
-
-			var tl = new TimelineMax() ;
-			tl.fromTo(homeSlide2, .5, {transform: "translate(0px)", opcity:1}, {transform: "translate(-50px)", opacity:0}, "start");
-			tl.fromTo(homeSlide3, .5, {transform: "translate(50px)", opacity:0 }, {transform: "translate(0px,0px)", opacity:1}, "start");
-
-
-		}
-		console.log(app.homeSliderNumber);
-
-		app.changeHomeSliderArrowColors();
-
-	},
 
 
 

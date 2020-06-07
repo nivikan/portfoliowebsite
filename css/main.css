@@ -820,7 +820,7 @@ html.tablet .orientationCircleAnim {
 ///////////////////////////////////////////////////////////////////*/
 
 .screens {
-	overflow: auto;
+	overflow: hidden;
     position: absolute;
     width: 385vh;
     height: 100%;
@@ -947,7 +947,7 @@ html.tablet .orientationCircleAnim {
     bottom: 0;
     background-color: #b2124c;
     pointer-events: none;
-    overflow: scroll;
+    /* overflow: scroll; */
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vw);
     scroll-snap-type: x mandatory;
@@ -1387,7 +1387,7 @@ html.tablet .orientationCircleAnim {
 	margin-left: 50%;
 	margin-right: 50%;
 	z-index: 10;
-	overflow: auto;
+	overflow: inherit;
     pointer-events: all;
 
 }
