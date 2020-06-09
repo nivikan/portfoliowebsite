@@ -45,7 +45,6 @@ var app = {
 
 	prePreload: function() {
 		if (!window.canLoad) return; //DONT LOAD ANYTHING IF BROWSER IS NOT SUPPORTED
-		lightGallery(document.getElementById('lightgallery'));
 		//app.introPreload();
 		//app.initEvents();
 		

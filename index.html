@@ -43,7 +43,7 @@
 	<link rel="stylesheet" href="css/browserCheck.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/modal-video.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/lightgallery.css">
+
 	
 	<!-- endinject -->
 	<!-- SCRIPTS -->
@@ -51,11 +51,7 @@
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="js/vendor/detectizr.js"></script>
 
-	<script src="js/vendor/lightgallery.min.js"></script>
 
-    <!-- lightgallery plugins -->
-    <script src="js/vendor/lg-thumbnail.min.js"></script>
-	<script src="js/vendor/lg-fullscreen.min.js"></script>
 
 
 </head>
@@ -78,95 +74,10 @@
 
 		<!-- HIDDEN BUTTON FOR TRAILER -->
 		<!-- BROWSER CHECK START -->
-		<div id="js-browserCheck" class="bCheck">
-			<div class="bCheck__inner">
-				<div class="bCheck__panal">
-					<div class="bCheck__box">
-						<img src="assets/img/preloader/smallLogo.png" alt="logo" />
-						<div class = "bCheck__box__text" localization-id="gameCompleteReleaseDate_browserCheck" style="line-height: 100%;"> </div>
-					</div>
-					<div id="browserCheckMsg" class="bCheck__box" localization-id="browserCheckMsg">
-						<p>We have detected you are using an outdated browser.
-							<br>To view this site please upgrade to a newer version
-							<br>of one of the following:</p>
-					</div>
-					<table class="browserLinks" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td>
-								<a title="browser upgrade link" class="browser-link browser-link--chrome" href="https://www.google.com/chrome/browser/desktop/" target="_blank"></a>
-							</td>
-							<td class="browserLinks__gap"></td>
-							<td>
-								<a title="browser upgrade link" class="browser-link browser-link--ff" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"></a>
-							</td>
-							<td class="browserLinks__gap"></td>
-							<td>
-								<a title="browser upgrade link" class="browser-link browser-link--ie" href="http://windows.microsoft.com/en-US/internet-explorer/download-ie" target="_blank"></a>
-							</td>
-							<td class="browserLinks__gap"></td>
-							<td>
-								<a title="browser upgrade link" class="browser-link browser-link--saf" href="https://support.apple.com/en_GB/downloads/safari" target="_blank"></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
 		<script>
-		window.canLoad = true;
-		var browser_name = Detectizr.browser.name;
-		var version = parseInt(Detectizr.browser.version);
-		if (browser_name == "ie" && version <= 11) window.canLoad = false;
-		//Check IE
-		else if (
-			browser_name == "chrome" &&
-			Detectizr.device.type == "desktop" &&
-			version <= 60
-		)
-			window.canLoad = false;
-		//Check Chrome
-		else if (
-			browser_name == "chrome" &&
-			Detectizr.device.type !== "desktop" &&
-			version <= 60
-		)
-			window.canLoad = false;
-		//Check Chrome Mobile
-		else if (browser_name == "safari" && version <= 8) window.canLoad = false;
-		//Check Safari
-		else if (
-			browser_name == "safari" &&
-			Detectizr.device.type !== "desktop" &&
-			version <= 8
-		)
-			window.canLoad = false;
-		//Check Safari Mobile
-		else if (browser_name == "firefox" && version <= 54) window.canLoad = false; //Check Firefox
-		//else if ((browser_name == "opera") && (version <= settings.browsers.opera ))  window.canLoad = false; //Check opera
-		if(Detectizr.os.name == "ios"){
-			version = String( Detectizr.os.version.charAt(0) )+ String( Detectizr.os.version.charAt(1) );
-			if(version<11) window.canLoad = false;
-		}
-		if (window.canLoad) {
-			document.getElementById("js-browserCheck").outerHTML = "";
-		} else {
-			document.getElementById("js-browserCheck").style.display = "table";
-		}
+			window.canLoad = true;
 		</script>
 		<!-- BROWSER CHECK END -->
-
-
-
-
-		<!-- ROTATE DEVICE SCREEN START-->
-		<!-- <div id="js-orientationLock" class="orientationLock" style="display : none">
-			<div class = "orientationCircleContainer" >
-				<div class ="orientationCircleAnim"></div>
-				<div class="orientationCircleText" localization-id= "rotateDeviceMsgText" > </div>
-			</div>
-		</div> -->
-
-		<!-- ROTATE DEVICE SCREEN END -->
 
 
 		<!-- ////////////////////////////////////
@@ -195,7 +106,7 @@
 							<img src="assets/img/home/me.png" alt="logo" />
 						</div>
 						<div id="js-helloText" class="helloText hoverEffectThis">HELLO! I'M</div>
-						<div id="js-nameText" class = "nameText hoverEffectThis">NIVETHA<br>KANNAN</div>
+						<div id="js-nameText" class = "nameText hoverEffectThis">NIVETHA KANNAN</div>
 						<div>
 							<p id="js-meDescription" class="meDescription hoverEffectThis">I AM A <b>DEVELOPER, DESIGNER, GAMER</b>, & ALL-AROUND NERD MAKING ART AND BEING CREATIVE. I <b>DESIGNED AND DEVELOPED THIS WEBSITE</b> MYSELF! HAVE A LOOK AROUND. CHEERS.</p>
 						</div>
@@ -394,7 +305,7 @@
 
 					<div id="js-frontPortfolioPanel1" class = "frontPortfolioPanel hidden">
 						<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 141.4214%;">
-							<iframe id = "js-frontPaneliFrame" src="https://www.behance.net/gallery/79196037/CARTOON-NETWORK-SDCC-2016-Signage?iframe=1" style="border: 0; top: 0; left: 0; width: 100%; height: 95vh; position: absolute;" allowfullscreen>
+							<iframe id = "js-frontPaneliFrame" src="" style="border: 0; top: 0; left: 0; width: 100%; height: 95vh; position: absolute;" allowfullscreen>
 							</iframe>
 						</div>
 					</div>
@@ -407,7 +318,7 @@
 
 					<div id="js-frontPortfolioPanel_gbWorld" class = "frontPortfolioPanel hidden">
 						<div class="portfolioBody bodyGBWorld">
-							<img class="imageTopIntro" src="assets/img/portfolio/gbWorld/drip.png" alt="dripImage" />
+							<img class="imageTopIntro" src="assets/img/portfolio/gbWorld/drip.png" alt="dripImage" /> 
 
 							<iframe src="https://player.vimeo.com/video/353260415" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/353260415">Ghostbusters World | Social Campaign</a> from <a href="https://vimeo.com/user16230218">Nivetha Kannan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
