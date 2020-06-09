@@ -3,6 +3,28 @@ var homeSlide2 = document.getElementById("js-homeSlideTwo");
 var homeSlide3 = document.getElementById("js-homeSlideThree");
 var prevScrollLeft = 0;
 var frontPanel = document.getElementById("js-frontPaneliFrame");
+var navUserAgent = navigator.userAgent;
+var browserName  = navigator.appName;
+var majorVersion = parseInt(navigator.appVersion,10);
+var tempNameOffset,tempVersionOffset,tempVersion;
+
+if ((tempVersionOffset=navUserAgent.indexOf("Opera"))!=-1) {
+	browserName = "Opera";
+} 
+
+else if ((tempVersionOffset=navUserAgent.indexOf("MSIE"))!=-1) {
+	browserName = "Microsoft Internet Explorer";
+} 
+else if ((tempVersionOffset=navUserAgent.indexOf("Chrome"))!=-1) {
+	browserName = "Chrome";
+} 
+else if ((tempVersionOffset=navUserAgent.indexOf("Safari"))!=-1) {
+	browserName = "Safari";
+} 
+else if ((tempVersionOffset=navUserAgent.indexOf("Firefox"))!=-1) {
+	browserName = "Firefox";
+} 
+
 
 
 var app = {
@@ -23,6 +45,7 @@ var app = {
 
 	prePreload: function() {
 		if (!window.canLoad) return; //DONT LOAD ANYTHING IF BROWSER IS NOT SUPPORTED
+		lightGallery(document.getElementById('lightgallery'));
 		//app.introPreload();
 		//app.initEvents();
 		
@@ -42,7 +65,7 @@ var app = {
 
 	preIntroPreload: function() {
 		app.initEvents(); //This Calls Scolling function that makes horizontal scroll happen
-		console.log("this is the Browser name: "+ window.navigator.appCodeName);
+		console.log("this is the Browser name: "+ browserName);
 		console.log("START");
 		app.introPreload();
 	},
@@ -605,6 +628,7 @@ var app = {
 				console.log("font panel is opened");
 			}
 		}
+
 		
 		);
 
@@ -708,9 +732,22 @@ var app = {
 ////////////////////////////////////////////////////////////////  OPEN GALLERY ITEM //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	openGalleryItem1: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_gbWorld();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+
+
+		else{
+
+			frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+
+		}
+
+	
 
 	},
 
@@ -779,6 +816,15 @@ var app = {
 		app.frontPanelOn = true;
 	},
 
+	showFrontPortfolioPanel_gbWorld(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_gbWorld").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front GB World Panel");
+		app.frontPanelOn = true;
+	},
+
 	hideFrontPortfolioPanel(){
 
 		if ( app.frontPanelOn == false ){
@@ -786,6 +832,8 @@ var app = {
 		}
 		else{
 			$("#js-frontPortfolioPanelExit").addClass("hidden");
+
+			$("#js-frontPortfolioPanel_gbWorld").addClass("hidden");
 
 			$("#js-frontPortfolioPanel1").addClass("hidden");
 			$("#js-frontPortfolioPanel2").addClass("hidden");
@@ -807,6 +855,7 @@ var app = {
 
 
 	},
+
 
 
 
