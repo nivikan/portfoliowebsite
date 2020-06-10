@@ -325,7 +325,8 @@ b {
 	z-index: 10;
 	width: 50vh;
     overflow-wrap: break-word;
-    white-space: break-spaces;
+	white-space: break-spaces;
+	white-space: pre-wrap;
 	-webkit-transition: opacity 1s; /* Safari */
 	-webkit-transition: transform .3s; /* Safari */
 	transform-origin: center;
@@ -361,6 +362,7 @@ b {
     overflow: auto;
 	overflow-wrap: break-word;
 	white-space: break-spaces;
+	white-space: pre-wrap;
 	font-size: 1.5vh;
 	z-index: 10;
 	font-weight: 400;
