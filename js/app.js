@@ -73,41 +73,76 @@ var app = {
 
 	introPreload: function() {
 		//$("#js-snapchatIntro-screen").addClass("hidden");
-		var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
 
-		console.log("preloader timeline");
+	
 
-		preloaderTimeline
+		if (isMobile){
+			var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
+			console.log("playing mobile intro anim");
+			preloaderTimeline
 
-			.fromTo(
-				".meImage",
-				1,
-				{ x: -400, opacity:0},
-				{ x: 0, opacity: 1, ease: Back.easeOut },
-				"init"
-			)
-			.fromTo(
-				".helloText",
-				0.5,
-				{ x: -30, opacity: 0 },
-				{ x: 0, opacity: 1, ease: Back.easeOut },
-				"init+=.2"
-			)
-			
-			.fromTo(
-				".meDescription",
-				0.5,
-				{ x: -30, opacity: 0 },
-				{ x: 0, opacity: 1, ease: Back.easeOut },
-				"init+=.4"
-			)
-			.fromTo(
-				".nameText",
-				0.5,
-				{ x:-100, opacity: 0 },
-				{ x:0, opacity: 1 ,  ease: Back.easeOut },
-				"init"
-			);
+				.fromTo(
+					".helloText",
+					0.5,
+					{ x: -30, opacity: 0 },
+					{ x: 0, opacity: 1, ease: Back.easeOut },
+					"init"
+				)
+
+				.fromTo(
+					".nameText",
+					0.5,
+					{ x:-100, opacity: 0 },
+					{ x:0, opacity: 1 ,  ease: Back.easeOut },
+					"init+=.2"
+				)
+				
+				.fromTo(
+					".meDescription",
+					0.5,
+					{ x: -30, opacity: 0 },
+					{ x: 0, opacity: 1, ease: Back.easeOut },
+					"init+=.4"
+				);
+
+		}
+
+		else{
+			var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
+			console.log("playing desktop intro anim");
+
+			preloaderTimeline
+
+				.fromTo(
+					".meImage",
+					1,
+					{ x: -400, opacity:0},
+					{ x: 0, opacity: 1, ease: Back.easeOut },
+					"init"
+				)
+				.fromTo(
+					".helloText",
+					0.5,
+					{ x: -30, opacity: 0 },
+					{ x: 0, opacity: 1, ease: Back.easeOut },
+					"init+=.2"
+				)
+				
+				.fromTo(
+					".meDescription",
+					0.5,
+					{ x: -30, opacity: 0 },
+					{ x: 0, opacity: 1, ease: Back.easeOut },
+					"init+=.4"
+				)
+				.fromTo(
+					".nameText",
+					0.5,
+					{ x:-100, opacity: 0 },
+					{ x:0, opacity: 1 ,  ease: Back.easeOut },
+					"init"
+				);
+		}
 
 		// //THIS IS A SEPARATE TIMELINE FOR THE ANIMATED TEXT
 		// var tl = new TimelineLite({

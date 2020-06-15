@@ -143,7 +143,7 @@ b {
 		margin-left: 0px;
 	}
 }
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+/* @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
     .screens {                           
 		height: 90vh;
 		margin-top: 5vh;
@@ -151,7 +151,7 @@ b {
     }                       
 }   
                                             
-/* iPad with landscape orientation. */                       
+                  
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {                         
     .screens {                           
 		height: 90vh;
@@ -159,15 +159,14 @@ b {
     }                       
 }
                                                
-/* iPhone 5 
-You can also target devices with aspect ratio. */                       
+               
 @media screen and (device-aspect-ratio: 40/71) {                              
     .screens {                           
 		height: 90vh;
 		margin-top: 5vh;
                 
     }                       
-}
+} */
 
 
 /*////////////////////////////////////////////////////////////////////
@@ -334,7 +333,7 @@ You can also target devices with aspect ratio. */
 
 @media screen and (max-width: 600px) {
 	.helloText {
-		top: 5vh;
+		top: 15vh;
 		left: 5vh;
 	}
 }
@@ -360,7 +359,7 @@ You can also target devices with aspect ratio. */
 
 @media screen and (max-width: 600px) {
 	.nameText {
-		top: 10vh;
+		top: 20vh;
 		left: 4.2vh;
 		font-size: 13vh;
 		line-height: 13vh;
@@ -402,7 +401,7 @@ You can also target devices with aspect ratio. */
 @media screen and (max-width: 600px) {
 	.meDescription {
 		width: 40vh;
-		top: 38vh;
+		top: 48vh;
 		left: 5vh;
 		text-align: left;
 		font-size: 2.8vh;
@@ -435,6 +434,8 @@ You can also target devices with aspect ratio. */
 @media screen and (max-width: 600px) {
 	.introPortfolio {
 		left: 74vh;
+		height: 85vh;
+		top: 9vh;
 	}
 }
 
@@ -483,6 +484,8 @@ You can also target devices with aspect ratio. */
 @media screen and (max-width: 600px) {
 	.gallery {
 		left: 120vh;
+		top: 8.5vh;
+		height: 82vh;
 	}
 }
 
@@ -496,6 +499,12 @@ You can also target devices with aspect ratio. */
 	background-position: center;
 
 
+}
+
+@media screen and (max-width: 600px) {
+	.galleryItem {
+		background-size: 100% auto;
+	}
 }
 
 .item1{
@@ -617,6 +626,8 @@ You can also target devices with aspect ratio. */
 @media screen and (max-width: 600px) {
 	.endPortfolio {
 		left: 293.8vh;
+		height: 85vh;
+		bottom: 10vh;
 	}
 }
 
@@ -716,6 +727,15 @@ You can also target devices with aspect ratio. */
 	color: #ffdd12;
 
 }
+@media screen and (max-width: 600px) {
+	.endAreaEmail {
+		padding-top: 2vh;
+		color: #ffdd12;
+		font-size: 3vh;
+		padding-bottom: 1vh;
+	}
+}
+
 
 .endAreaResume{
 	pointer-events: all;
@@ -724,6 +744,12 @@ You can also target devices with aspect ratio. */
 	transform-origin: center;
 
 }
+@media screen and (max-width: 600px) {
+	.endAreaResume {
+		font-size: 2.35vh;
+	}
+}
+
 
 .endAreaResume:hover{
 	transform: scale(1.2);
@@ -821,13 +847,15 @@ You can also target devices with aspect ratio. */
     cursor: crosshair;
     transition: transform 0.3s;
     transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.8);
-    transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-filter: drop-shadow(3px 3px 0px #ffdd12 );
+  	filter: drop-shadow(3px 3px 0px #ffdd12);
 }
 @media screen and (max-width: 600px) {
 	.frontPortfolioPanelExit {
 		background-color: black;
 		padding: 4px;
-		top: 2vh;
+		top: 13vh;
 		left: 2vh;
 		height: 6vh;
 		width: 6vh;
@@ -917,15 +945,32 @@ You can also target devices with aspect ratio. */
 .row_5Pieces{
 	width: 18%;
 }
+@media screen and (max-width: 600px) {
+	.row_5Pieces {
+		width: 48%;
+	}
+}
+
 .row_4Pieces{
 	width: 23%;
 }
+@media screen and (max-width: 600px) {
+	.row_4Pieces {
+		width: 48%;
+	}
+}
+
 
 .row_3Pieces{
 	width: 31.3%;
 }
 .row_2Pieces{
 	width: 45%;
+}
+@media screen and (max-width: 600px) {
+	.row_2Pieces {
+		width: 48%;
+	}
 }
 
 .moreInfoButton{
@@ -950,9 +995,14 @@ You can also target devices with aspect ratio. */
 	
 }
 
+.spaceAfterPortfolioPage{
+	width: 100vw;
+	height: 15vh;;
+}
+
 @media screen and (max-width: 600px) {
 	.moreInfoButton {
-		margin-bottom: 20vh; */
+		margin-bottom: 20vh;
 		width: 100vw;
 		margin: 10vh;
 		margin-left: 0;
