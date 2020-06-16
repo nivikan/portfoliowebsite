@@ -801,6 +801,7 @@ b {
 .darkenPage{
 	height: 100vh;
 	width: 100vw;
+	top: 0vw;
 	position: fixed;
 	background-color: black;
 	opacity:0;
@@ -814,7 +815,8 @@ b {
 .frontPortfolioPanel{
 
 	height: 100vh;
-	width: 80vh;
+	top: 0vw;
+	width: 130vh;
 	position: fixed;
 	transform-origin: center;
 	background-color: black;
@@ -848,17 +850,18 @@ b {
     transition: transform 0.3s;
     transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.8);
 	transition-duration: 0.3s;
-	-webkit-filter: drop-shadow(3px 3px 0px #ffdd12 );
-  	filter: drop-shadow(3px 3px 0px #ffdd12);
 }
+	
 @media screen and (max-width: 600px) {
 	.frontPortfolioPanelExit {
 		background-color: black;
 		padding: 4px;
-		top: 13vh;
+		top: 8vh;
 		left: 2vh;
 		height: 6vh;
 		width: 6vh;
+		-webkit-filter: drop-shadow(3px 3px 0px #ffdd12 );
+  		filter: drop-shadow(3px 3px 0px #ffdd12);
 	}
 }
 
@@ -893,7 +896,7 @@ b {
 
 
 .portfolioBody{
-	width: 100vw;
+	width: 130vh;
 	height: 100%;
 	display: grid;
 	overflow:scroll;
@@ -901,39 +904,91 @@ b {
 }
 
 .portfolioBody iframe{
-	width: 100vw;
+	width: 130vh;
 	height: 40vh;
 
 }
 
-.imageTopIntro{
-	width: 100vw;
+@media screen and (max-width: 600px) {
+	.portfolioBody iframe{
+		width: 100vw;
+	}
+}
 
+
+.imageTopIntro{
+	width: 130vh;
+	margin-bottom:5vh;
+
+}
+@media screen and (max-width: 600px) {
+	.imageTopIntro{
+		width: 100vw;
+	}
+}
+
+.projectText{
+	width: 130vh;
+	color: white;
+	text-align: center;
+	display: inline-block;
+    white-space: normal;
+	padding: 5vh;
+}
+@media screen and (max-width: 600px) {
+	.projectText{
+		width: 100vw;
+		padding-top: 0;
+	}
+}
+
+.projectTitle{
+	padding: 0;
+	font-weight: 800;
+	font-size: 3vh;
+	letter-spacing: .4vh;
+}
+
+@media screen and (max-width: 600px) {
+	.projectTitle{
+		font-size: 5vh;
+	}
+}
+
+
+.projectSubtitle{
+	padding-top: 1vh;
+	padding-bottom: 2vh;
+	font-weight: 800;
+	opacity: .5;
+
+
+}
+@media screen and (max-width: 600px) {
+	.projectSubtitle{
+		padding-top: 2vh;
+		padding-bottom: 4vh;
+	}
+}
+.projectSummary{
+	font-weight: 300;
 }
 
 .imageSeparator{
-	width: 100vw;
+	width: 130vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+}
+@media screen and (max-width: 600px) {
+	.imageSeparator{
+		width: 100vw;
+	}
 }
 
 .imageRow{
 	white-space: nowrap;
     text-align: center;
-    width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-@media screen and (max-width: 600px) {
-	.imageRow {
-		white-space: nowrap;
-		text-align: center;
-		width: 100vw;
-		margin-left: 0;
-		margin-right: 0;
-	}
+    width: 130vh;
 }
 
 .imageRow img{
@@ -941,6 +996,12 @@ b {
     float: left;
     margin: 1%;
 }
+@media screen and (max-width: 600px) {
+	.imageRow {
+		width: 100vw;
+	}
+}
+
 
 .row_5Pieces{
 	width: 18%;
@@ -965,12 +1026,20 @@ b {
 	width: 31.3%;
 }
 .row_2Pieces{
-	width: 45%;
+	width: 41.5%;
 }
 @media screen and (max-width: 600px) {
 	.row_2Pieces {
-		width: 48%;
+		width: 47.7%;
 	}
+}
+
+
+.row_1Pieces{
+	width: 100vw;
+    margin: 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 .moreInfoButton{
@@ -987,12 +1056,19 @@ b {
 	transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.8);
 	transition-duration: 0.2s;
 	opacity: .3;
+	width: 115vh;
 }
+
 
 .moreInfoButton:hover{
 	opacity: 1;
 	transform: scale(1.1);
 	
+}
+@media screen and (max-width: 600px) {
+	.moreInfoButton {
+		width: 100vw;
+	}
 }
 
 .spaceAfterPortfolioPage{

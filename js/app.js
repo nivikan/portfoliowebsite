@@ -767,7 +767,7 @@ var app = {
 	openGalleryItem1: function(){
 
 		if(browserName=="Safari"){
-			app.showFrontPortfolioPanel_gbWorld();
+			app.showFrontPortfolioPanel_first();
 			console.log("Showing Safari-safe version of FrontPanel")
 
 		}
@@ -787,57 +787,106 @@ var app = {
 
 	openGalleryItem2: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/80820957/NETFLIX-The-Toys-That-Made-Us-Animations?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_second();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/80820957/NETFLIX-The-Toys-That-Made-Us-Animations?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
 	openGalleryItem3: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/86665201/CBS-FILMS-Scary-Stories-EPK-Website-UI-Design?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_third();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/86665201/CBS-FILMS-Scary-Stories-EPK-Website-UI-Design?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
 	openGalleryItem4: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_first();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
 	openGalleryItem5: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/97733623/HULU-Dollface-Launch-Campaign?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_fifth();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
+
 
 	},
 
 	openGalleryItem6: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_first();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
 	openGalleryItem7: function(){
 
-		frontPanel.src= "https://www.behance.net/gallery/79195581/CARTOON-NETWORK-PPG-2016-Launch-Campaign?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_first();
+			console.log("Showing Safari-safe version of FrontPanel")
+
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/79195581/CARTOON-NETWORK-PPG-2016-Launch-Campaign?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
 	openGalleryItem8: function(){
+		if(browserName=="Safari"){
+			app.showFrontPortfolioPanel_first();
+			console.log("Showing Safari-safe version of FrontPanel")
 
-		frontPanel.src= "https://www.behance.net/gallery/80930803/NETFLIX-Christmas-Chronicles-Elf-Intros?iframe=1";
-		app.showFrontPortfolioPanel();
-		// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
+		else{
+			frontPanel.src= "https://www.behance.net/gallery/80930803/NETFLIX-Christmas-Chronicles-Elf-Intros?iframe=1";
+			app.showFrontPortfolioPanel();
+			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		}
 
 	},
 
@@ -850,14 +899,79 @@ var app = {
 		app.frontPanelOn = true;
 	},
 
-	showFrontPortfolioPanel_gbWorld(){
+	showFrontPortfolioPanel_first(){
 		$("#js-frontPortfolioPanelExit").removeClass("hidden");
-		$("#js-frontPortfolioPanel_gbWorld").removeClass("hidden");
+		$("#js-frontPortfolioPanel_first").removeClass("hidden");
 		document.getElementById("js-darkenPage").style.opacity = "0.9";
 		document.getElementById("js-darkenPage").style.pointerEvents = "all";
-		console.log("Showing Front GB World Panel");
+		console.log("Showing Front First Panel");
 		app.frontPanelOn = true;
 	},
+
+	showFrontPortfolioPanel_second(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_second").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Second Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_third(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_third").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Third Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_fourth(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_fourth").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Fourth Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_fifth(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_fifth").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Fifth Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_sixth(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_sixth").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Sixth Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_seventh(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_seventh").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Sixth Panel");
+		app.frontPanelOn = true;
+	},
+
+	showFrontPortfolioPanel_eighth(){
+		$("#js-frontPortfolioPanelExit").removeClass("hidden");
+		$("#js-frontPortfolioPanel_eighth").removeClass("hidden");
+		document.getElementById("js-darkenPage").style.opacity = "0.9";
+		document.getElementById("js-darkenPage").style.pointerEvents = "all";
+		console.log("Showing Front Sixth Panel");
+		app.frontPanelOn = true;
+	},
+
+
 
 	hideFrontPortfolioPanel(){
 
@@ -867,7 +981,14 @@ var app = {
 		else{
 			$("#js-frontPortfolioPanelExit").addClass("hidden");
 
-			$("#js-frontPortfolioPanel_gbWorld").addClass("hidden");
+			$("#js-frontPortfolioPanel_first").addClass("hidden");
+			$("#js-frontPortfolioPanel_second").addClass("hidden");
+			$("#js-frontPortfolioPanel_third").addClass("hidden");
+			$("#js-frontPortfolioPanel_fourth").addClass("hidden");
+			$("#js-frontPortfolioPanel_fifth").addClass("hidden");
+			$("#js-frontPortfolioPanel_sixth").addClass("hidden");
+			$("#js-frontPortfolioPanel_seventh").addClass("hidden");
+			$("#js-frontPortfolioPanel_eighth").addClass("hidden");
 
 			$("#js-frontPortfolioPanel1").addClass("hidden");
 			$("#js-frontPortfolioPanel2").addClass("hidden");
