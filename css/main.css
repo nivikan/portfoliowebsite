@@ -562,7 +562,7 @@ b {
 	letter-spacing: .2vh;
     font-size: 3vh;
     font-weight: 800;
-	white-space: break-spaces;
+	white-space: pre-wrap;
 
 }
 
@@ -570,7 +570,7 @@ b {
 	letter-spacing: .3vh;
 	font-size: 2vh;
 	margin-bottom: 2vh;
-	white-space: break-spaces;
+	white-space: pre-wrap;
 
 }
 
@@ -1057,6 +1057,7 @@ b {
 	transition-duration: 0.2s;
 	opacity: .3;
 	width: 115vh;
+	font-weight: 600;
 }
 
 

@@ -818,7 +818,7 @@ var app = {
 	openGalleryItem4: function(){
 
 		if(browserName=="Safari"){
-			app.showFrontPortfolioPanel_first();
+			app.showFrontPortfolioPanel_fourth();
 			console.log("Showing Safari-safe version of FrontPanel")
 
 		}
@@ -849,7 +849,7 @@ var app = {
 	openGalleryItem6: function(){
 
 		if(browserName=="Safari"){
-			app.showFrontPortfolioPanel_first();
+			app.showFrontPortfolioPanel_sixth();
 			console.log("Showing Safari-safe version of FrontPanel")
 
 		}
@@ -864,7 +864,7 @@ var app = {
 	openGalleryItem7: function(){
 
 		if(browserName=="Safari"){
-			app.showFrontPortfolioPanel_first();
+			app.showFrontPortfolioPanel_seventh();
 			console.log("Showing Safari-safe version of FrontPanel")
 
 		}
@@ -878,7 +878,7 @@ var app = {
 
 	openGalleryItem8: function(){
 		if(browserName=="Safari"){
-			app.showFrontPortfolioPanel_first();
+			app.showFrontPortfolioPanel_eighth();
 			console.log("Showing Safari-safe version of FrontPanel")
 
 		}
