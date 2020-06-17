@@ -122,6 +122,118 @@ b {
 
 
 
+
+
+/*////////////////////////////////////////////////////////////////////
+// LOADING PAGE                                                    //
+///////////////////////////////////////////////////////////////////*/
+
+
+
+.loadingPage{
+	position: fixed;
+    height: 105%;
+    width: 105%;
+    background-color: #b2124c;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    text-align: center;
+	align-content: center;
+	pointer-events: none;
+}
+
+.loadingBarBG{
+	margin-top: 30.2vh;
+    /* margin-top: 50%; */
+    /* margin-bottom: 50%; */
+    position: fixed;
+    left: 43.28vw;
+    border: blue;
+    width: 18.3vw;
+    height: 18.3vw;
+    background-color: #841240;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: auto; */
+    border: 16px solid #841240;
+    border-radius: 50%;
+    border-top: 16px solid #ffdd12;
+   -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 600px) {
+	.loadingBarBG {
+
+		margin-top: 30.6vh;
+		width: 50vw;
+		height: 50vw;
+		left: 27.6vw;
+		
+	}
+}
+
+
+.loadingImage{
+	position: absolute;
+    width: 17vw;
+    top: 30.6vh;
+    left: 43.99vw;
+}
+@media screen and (max-width: 600px) {
+	.loadingImage {
+
+		position: absolute;
+		width: 46vw;
+		top: 31.2vh;
+		left: 29.5vw;
+		
+	}
+}
+
+}
+
+.loadingBarOutside{
+	width: 40vw;
+    height: 3vh;
+    border-style: solid;
+    border-color: #841240;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3vh;
+
+}
+
+.loadingBar{
+	width: 39.7vw;
+    height: 2.4vh;
+    background-color: #841240;
+    border-radius: 3vh;
+
+}
+.loaderPercentText{
+	font-size: 4vh;
+	color: white;
+
+}
+
+
+
 /*////////////////////////////////////////////////////////////////////
 // SCREENS                                                          //
 ///////////////////////////////////////////////////////////////////*/
@@ -816,7 +928,7 @@ b {
 
 	height: 100vh;
 	top: 0vw;
-	width: 130vh;
+	width: 75%;
 	position: fixed;
 	transform-origin: center;
 	background-color: black;
@@ -896,7 +1008,7 @@ b {
 
 
 .portfolioBody{
-	width: 130vh;
+	width: 100%;
 	height: 100%;
 	display: grid;
 	overflow:scroll;
@@ -904,7 +1016,7 @@ b {
 }
 
 .portfolioBody iframe{
-	width: 130vh;
+	width: 100%;
 	height: 40vh;
 
 }
@@ -917,7 +1029,7 @@ b {
 
 
 .imageTopIntro{
-	width: 130vh;
+	width: 100%;
 	margin-bottom:5vh;
 
 }
@@ -928,7 +1040,7 @@ b {
 }
 
 .projectText{
-	width: 130vh;
+	width: 100%;
 	color: white;
 	text-align: center;
 	display: inline-block;
@@ -975,7 +1087,7 @@ b {
 }
 
 .imageSeparator{
-	width: 130vh;
+	width: 100%;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
@@ -988,7 +1100,7 @@ b {
 .imageRow{
 	white-space: nowrap;
     text-align: center;
-    width: 130vh;
+    width: 100%;
 }
 
 .imageRow img{
@@ -1026,17 +1138,13 @@ b {
 	width: 31.3%;
 }
 .row_2Pieces{
-	width: 41.5%;
+	width: 47.7%;
 }
-@media screen and (max-width: 600px) {
-	.row_2Pieces {
-		width: 47.7%;
-	}
-}
+
 
 
 .row_1Pieces{
-	width: 100vw;
+	width: 98%;
     margin: 0;
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -1056,7 +1164,7 @@ b {
 	transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.8);
 	transition-duration: 0.2s;
 	opacity: .3;
-	width: 115vh;
+	width: 87%;
 	font-weight: 600;
 }
 
@@ -1073,14 +1181,14 @@ b {
 }
 
 .spaceAfterPortfolioPage{
-	width: 100vw;
+	width: 100%;
 	height: 15vh;;
 }
 
 @media screen and (max-width: 600px) {
 	.moreInfoButton {
 		margin-bottom: 20vh;
-		width: 100vw;
+		width: 100%;
 		margin: 10vh;
 		margin-left: 0;
 		margin-right: 0;

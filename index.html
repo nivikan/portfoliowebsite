@@ -94,6 +94,17 @@
 					</div> 
 				</div> -->
 
+			<!-- LOADING SCREEN -->
+
+
+			<div class = "loadingPage">
+
+				<div class="loadingBarBG"></div>
+				<img src="assets/img/home/nivAvatar.png" alt="logo" class="loadingImage" />
+				
+			</div>
+
+
 			<!--SCREENS START -->
 			<div class="screens">   <!-- THIS IS THE SCROLL WRAPPER -->
 
@@ -544,7 +555,7 @@
 							<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8f1b8097724189.5ecc16a0d0a3a.png" alt="Comic 2 Panel 4" class="row_4Pieces" />
 						</div>
 
-						<img class = "imageSeparator" src="htthttps://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e4f8cb97724189.5ecc16a37e6ef.png" alt="Comics" />
+						<img class = "imageSeparator" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/93e90397724189.5ecc16a37d75b.png" alt="Comics" />
 
 						<div id = "lightgallery" class = "imageRow">
 							<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/e4a48e97724189.5ecc16a167602.gif" alt="Giphy Sticker 1" class="row_4Pieces" />
@@ -755,7 +766,7 @@
 								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/98176c80930803.5cef6d967fd6d.jpg" alt="Elf Profiles 4" class="row_2Pieces" />
 							</div>
 
-							<div id = "lightgallery" class = "imageRow">
+							<div id = "lightgallery" class = "imageRow" >
 								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c5c6f380930803.5cef6d96e3aef.jpg" alt="Elf Profiles 5" class="row_2Pieces" />
 								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3eb8e980930803.5cef6d96e36c4.jpg" alt="Elf Profiles 6" class="row_2Pieces" />
 							</div>
@@ -767,21 +778,18 @@
 						</div>
 					</div>
 
-
-
-
-
-			</div>
-			
-				
-
 			<!-- END FRONT PANELS -->
 
 
 
+		
 
 			</div> 
 			<!-- SCREENS END-->
+
+
+			
+
 
 			<!--SIDE BAR START -->
 			<div class = "sideBar">
@@ -836,7 +844,6 @@
 
 
 	</div>
-	<script src="assets/json/siteCopy.js"></script>
 	<!-- inject:js -->
 	<script type="text/javascript" src="js/vendor/three.min.js"></script>
 	<script type="text/javascript" src="js/vendor/SplitText.js"></script>
@@ -848,54 +855,6 @@
 	<script type="text/javascript" src="js/vendor/stats.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<!-- endinject -->
-
-
-
-
-	<script id="vertexShader" type="x-shader/x-vertex">
-		
-		uniform mat4 modelViewMatrix;
-		uniform mat4 projectionMatrix;
-		attribute vec3 position;
-		attribute vec3 offset;
-		attribute vec2 uv;
-		varying vec2 vUv;
-		varying float fogDepth;
-
-		void main() {
-			vUv = uv;
-			vec4 mvPosition = modelViewMatrix * vec4( offset + position, 1.0 );
-			
-			fogDepth = -mvPosition.z*2.;
-			gl_Position = projectionMatrix * mvPosition;
-
-		}
-
-	</script>
-
-	<script id="fragmentShader" type="x-shader/x-fragment">
-
-		precision highp float;
-
-		uniform vec3 fogColor;
-		varying float fogDepth;
-		uniform float fogNear;
-		uniform float fogFar;
-
-		uniform sampler2D map;
-		varying vec2 vUv;
-		void main() {
-			gl_FragColor = texture2D( map, vUv );
-		
-	
-		float fogFactor = smoothstep( fogNear, fogFar, fogDepth );
-	
-		gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
-		gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
-		gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
-		}
-
-	</script>
 
 	
 </body>

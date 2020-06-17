@@ -41,25 +41,24 @@ var app = {
 	homeSliderNumber:1,
 	frontPanelOn: false,
 	isMobile:false,
+	
 
 
 	prePreload: function() {
 		if (!window.canLoad) return; //DONT LOAD ANYTHING IF BROWSER IS NOT SUPPORTED
 		//app.introPreload();
 		//app.initEvents();
-		
-		if (
-			siteCopy.isDesktopLink == false &&
-			siteCopy.isFacebookLink == false &&
-			siteCopy.isTwitterLink == false &&
-			siteCopy.isInstagramLink == false
-		) {
-			document.getElementById("js-visitText").style.display = "none";
-			document.getElementById("js-visitText2").style.display = "none";
-		}
+		console.log('PRE PRELOAD');
+
+		// window.onload = (event) => {
+		// 	console.log('page is fully loaded');
+		// 	app.outroLoader();
+		// };
+
+		setTimeout(function () {app.outroLoader();}, 2000);
 
 
-		app.preIntroPreload(); //THIS IS CORRECT CALL
+		//app.preIntroPreload(); //THIS IS CORRECT CALL
 	},
 
 	preIntroPreload: function() {
@@ -69,14 +68,44 @@ var app = {
 		app.introPreload();
 	},
 
+	outroLoader:function(){
+
+		var loaderTimeline = new TimelineMax({onComplete: app.preIntroPreload});
+			console.log("playing loader outro anim");
+			loaderTimeline
+
+				.fromTo(
+					".loadingImage",
+					0.5,
+					{ scale: 1, opacity: 1 },
+					{ scale: 10, opacity: 0, ease: Back.easeOut },
+					"init"
+				)
+
+				.fromTo(
+					".loadingBarBG",
+					0.5,
+					{ scale:1, opacity: 1 },
+					{ scale:0, opacity: 0 ,  ease: Back.easeOut },
+					"init"
+				)
+				
+				.fromTo(
+					".loadingPage",
+					0.5,
+					{ opacity: 1 },
+					{ opacity: 0, ease: Back.easeOut },
+					"init+=.1"
+				);
+
+
+	},
 	
 
 	introPreload: function() {
-		//$("#js-snapchatIntro-screen").addClass("hidden");
-
 	
 
-		if (isMobile){
+		if (app.isMobile){
 			var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
 			console.log("playing mobile intro anim");
 			preloaderTimeline
@@ -261,324 +290,7 @@ var app = {
 			;
 	},
 
-	showGameOverScreen: function() {
-		var gameOverScreen_Intro = new TimelineMax({
-			onComplete: function() {
-				//app.showGameOverScreen();
-				$("#js-endScreen").removeClass("not-active");
-			}
-		});
-		document.getElementById("js-coins-gameOver").innerHTML =
-			app.collectedCoins;
 
-		var ftSize = "7vh";
-		if ($(window).width() < 480) {
-			ftSize = "5vh";
-		}
-
-		//THIS IS A SEPARATE TIMELINE FOR THE ANIMATED TEXT
-		var tlsplitText = new TimelineLite({
-		});
-
-
-		if (siteCopy.isThai == false){ 
-
-			(mySplitText = new SplitText(".gameOver_IntroScreen_text", {
-				type: "words,chars"
-			})),
-				(chars = mySplitText.chars); //an array of all the divs that wrap each character
-
-
-			(mySplitText = new SplitText(".gameOver_IntroScreen_text", {
-				type: "words,chars"
-			})),
-			(chars = mySplitText.chars); //an array of all the divs that wrap each character
-			//TweenLite.set(".gameOver_IntroScreen_text");
-			tlsplitText.staggerFrom(chars,0.5,{ y: 20, opacity: 0, ease: Elastic.easeOut },0.07,);
-		}
-
-		else{
-			tlsplitText.fromTo(".gameOver_IntroScreen_text", .4, {scale:.5, opacity:0, ease: Back.easeOut}, {scale:1, opacity:1, ease: Back.easeOut});
-		}
-
-
-
-
-		gameOverScreen_Intro
-			.fromTo(".gameOverScreen", 0.25, { opacity: 0 }, { opacity: 1 })
-			.fromTo(
-				".gameOver_yetiLeft",
-				0.5,
-				{ x: "-100%" },
-				{ x: "0%", ease: Sine.easeOut },
-				"start"
-			)
-			.fromTo(
-				".gameOver_yetiRight",
-				0.55,
-				{ x: "100%" },
-				{ x: "0%", ease: Sine.easeOut },
-				"start+=.1"
-			)
-			.fromTo(
-				".gameOver_yetiLeft",
-				0.45,
-				{ backgroundPosition: "0% 90%" },
-				{ backgroundPosition: "-100% 90%", ease: Sine.easeIn },
-				"start+=1.4"
-			)
-			.fromTo(
-				".gameOver_yetiRight",
-				0.35,
-				{ backgroundPosition: "100% 90%" },
-				{ backgroundPosition: "200% 90%", ease: Sine.easeIn },
-				"start+=1.55"
-			)
-			.fromTo(
-				".gameOver_IntroScreen_text",
-				0.4,
-				{ y: "-40%" },
-				{ y: "0%", ease: Sine.easeOut },
-				"start+=1.5"
-			)
-			.fromTo(
-				".gameOver_IntroScreen",
-				0.5,
-				{ opacity: 1 },
-				{ opacity: 0 },
-				"start+=1.5"
-			)
-
-			.fromTo(
-				".gameOver_TT",
-				0.5,
-				{ opacity: 0, y: "-200%", backgroundPosition: "50% 100%" },
-				{
-					opacity: 1,
-					y: "0%",
-					backgroundPosition: "50% 100%",
-					ease: Back.easeOut
-				},
-				"start+=2.05"
-			)
-			.fromTo(
-				".gameOver_TTtext",
-				0.7,
-				{ opacity: 0, y: "-200%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2"
-			)
-			.fromTo(
-				".gameOver_text",
-				0.55,
-				{ opacity: 0, scale: 2 },
-				{ opacity: 1, scale: 1, ease: Back.easeOut },
-				"start+=2"
-			)
-
-			.fromTo(
-				".playAgain",
-				0.6,
-				{ opacity: 0, scale: 0, backgroundSize: "0% 0%" },
-				{
-					opacity: 1,
-					scale: 1,
-					backgroundSize: "90% 90%",
-					ease: Back.easeOut
-				},
-				"start+=2.6"
-			)
-			.fromTo(
-				".win_btn",
-				0.6,
-				{ opacity: 0, scale: 0, backgroundSize: "0% 0%" },
-				{
-					opacity: 1,
-					scale: 1,
-					backgroundSize: "90% 90%",
-					ease: Back.easeOut
-				},
-				"start+=2.7"
-			)
-
-			.fromTo(
-				".gameOver_Percy",
-				0.6,
-				{ opacity: 0, x: -200 },
-				{ opacity: 1, x: 0, ease: Sine.easeOut },
-				"start+=2.3"
-			)
-			.fromTo(
-				".gameOver_textSocial",
-				0.5,
-				{ opacity: 0, y: "50%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2.4"
-			)
-			.fromTo(
-				".gameOver_FB",
-				0.6,
-				{ opacity: 0, y: "200%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2.4"
-			)
-			.fromTo(
-				".gameOver_TW",
-				0.6,
-				{ opacity: 0, y: "200%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2.5"
-			)
-			.fromTo(
-				".gameOver_IG",
-				0.6,
-				{ opacity: 0, y: "200%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2.6"
-			)
-			.fromTo(
-				".gameOver_DT",
-				0.6,
-				{ opacity: 0, y: "200%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"start+=2.7"
-			)
-
-			.fromTo(
-				".gameOver_TextContainer",
-				0.45,
-				{ x: "-0%", ease: Back.easeOut },
-				{ x: "-50%", ease: Back.easeOut },
-				"start+=4.1"
-			)
-			;
-	},
-
-	showSuccessScreen: function() {
-		// app.hideTTAndSoundToggle();
-		app.hideTT();
-		var gameSuccessScreen_Intro = new TimelineMax({
-			onComplete: function() {
-				//app.showGameOverScreen();
-				$("#js-endScreen").removeClass("not-active");
-			}
-		});
-
-		document.getElementById("js-coins-success").innerHTML =
-			app.collectedCoins;
-
-		gameSuccessScreen_Intro
-			.fromTo(".winScreen", 0.25, { opacity: 0 }, { opacity: 1 })
-			.fromTo(
-				".gameOver_TTtext",
-				0.4,
-				{ opacity: 0, y: "-30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning"
-			)
-			.fromTo(
-				".win_TT",
-				0.4,
-				{ opacity: 0, backgroundPosition: "50% -100%" },
-				{
-					opacity: 1,
-					backgroundPosition: "50% 90%",
-					ease: Back.easeOut
-				},
-				"beginning-=.1"
-			)
-			.fromTo(
-				".gameOver_text",
-				0.5,
-				{ opacity: 0, scale: 2 },
-				{ opacity: 1, scale: 1, ease: Back.easeOut },
-				"beginning"
-			)
-			.fromTo(
-				"#js-win-btn",
-				0.5,
-				{ opacity: 0, scale: 0 },
-				{ opacity: 1, scale: 1, ease: Back.easeOut },
-				"-=.35"
-			)
-			.fromTo(
-				"#js-moreGames-btn-win",
-				0.5,
-				{ opacity: 0, scale: 0 },
-				{ opacity: 1, scale: 1, ease: Back.easeOut },
-				"-=.35"
-			)
-
-			.fromTo(
-				".successScreen_migo",
-				0.4,
-				{ opacity: 0, x: 200 },
-				{ opacity: 1, x: 0, ease: Sine.easeOut },
-				"beginning -= 1"
-			)
-			.fromTo(
-				".successScreen_dorgle",
-				0.45,
-				{ opacity: 0, x: -200 },
-				{ opacity: 1, x: 0, ease: Sine.easeOut },
-				"beginning -= .9"
-			)
-
-			.fromTo(
-				".gameOver_textSocial",
-				0.5,
-				{ opacity: 0, y: "30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning+=.5"
-			)
-			.fromTo(
-				".gameOver_FB",
-				0.5,
-				{ opacity: 0, y: "30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning -=.5"
-			)
-			.fromTo(
-				".gameOver_TW",
-				0.5,
-				{ opacity: 0, y: "30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning -=.35"
-			)
-			.fromTo(
-				".gameOver_IG",
-				0.5,
-				{ opacity: 0, y: "30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning -=.25"
-			)
-			.fromTo(
-				".gameOver_DT",
-				0.5,
-				{ opacity: 0, y: "30%" },
-				{ opacity: 1, y: "0%", ease: Back.easeOut },
-				"beginning -=.15"
-			)
-
-			.fromTo(
-				".gameOver_TextContainer",
-				0.45,
-				{ x: "-0%", ease: Back.easeOut },
-				{ x: "-50%", ease: Back.easeOut },
-				"beginning+=1.9"
-			);
-	},
-
-	showInstructions: function() {
-		$("#js-preloader-screen").addClass("hidden");
-		$("#js-instruction-screen").removeClass("not-active");
-		$("#js-preloader-screen").addClass("not-active");
-	},
-
-	hideInstructions: function() {
-		$("#js-preloader-screen").addClass("hidden");
-		$("#js-instruction-screen").addClass("hidden");
-	},
 
 	showTTAndSoundToggle_intro: function() {
 		var TTAndSoundToggle_intro = new TimelineMax({
@@ -630,18 +342,18 @@ var app = {
 		window.addEventListener('wheel', function(e) {
 			if ($("#js-frontPortfolioPanelExit").hasClass("hidden")){
 
-				console.log("font panel is closed");
+				//console.log("font panel is closed");
 
 
 				if (e.deltaY > 0) {
 					document.documentElement.scrollLeft += 100;
 					//document.documentElement.scrollTop=0;
-					console.log("the scroll top is " + document.documentElement.scrollTop);
+					//console.log("the scroll top is " + document.documentElement.scrollTop);
 				}
 				else {
 					document.documentElement.scrollLeft -= 100;
 					//document.documentElement.scrollTop=0;
-					console.log("the scroll top is " + document.documentElement.scrollTop);
+					//console.log("the scroll top is " + document.documentElement.scrollTop);
 				}
 				if ((document.documentElement.scrollLeft >= 1300) && (prevScrollLeft < 1300)){
 					app.introEndScreenAnim();
@@ -774,7 +486,6 @@ var app = {
 
 
 		else{
-
 			frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
 			app.showFrontPortfolioPanel();
 			// $("#js-frontPortfolioPanel1").removeClass("hidden");
@@ -1020,6 +731,7 @@ var app = {
 
 
 	onLoadStart: function(url, itemsLoaded, itemsTotal) {
+
 
 	},
 
