@@ -478,19 +478,19 @@ var app = {
 ////////////////////////////////////////////////////////////////  OPEN GALLERY ITEM //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	openGalleryItem1: function(){
 
-		if(browserName=="Safari"){
+		//if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_first();
 			console.log("Showing Safari-safe version of FrontPanel")
 
-		}
+		// }
 
 
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
+		// else{
+		// 	frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
+		// 	app.showFrontPortfolioPanel();
+		// 	// $("#js-frontPortfolioPanel1").removeClass("hidden");
 
-		}
+		// }
 
 	
 
@@ -498,106 +498,51 @@ var app = {
 
 	openGalleryItem2: function(){
 
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_second();
 			console.log("Showing Safari-safe version of FrontPanel")
 
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/80820957/NETFLIX-The-Toys-That-Made-Us-Animations?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
-
+	
 	},
 
 	openGalleryItem3: function(){
 
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_third();
 			console.log("Showing Safari-safe version of FrontPanel")
-
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/86665201/CBS-FILMS-Scary-Stories-EPK-Website-UI-Design?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 	},
 
 	openGalleryItem4: function(){
 
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_fourth();
 			console.log("Showing Safari-safe version of FrontPanel")
-
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 	},
 
 	openGalleryItem5: function(){
-
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_fifth();
 			console.log("Showing Safari-safe version of FrontPanel")
-
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/97724189/SONY-Ghostbusters-Social-Campaign?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 
 	},
 
 	openGalleryItem6: function(){
 
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_sixth();
 			console.log("Showing Safari-safe version of FrontPanel")
 
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/83482289/SONY-GhostbustersWorld-Digital-Campaign?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 	},
 
 	openGalleryItem7: function(){
 
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_seventh();
 			console.log("Showing Safari-safe version of FrontPanel")
-
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/79195581/CARTOON-NETWORK-PPG-2016-Launch-Campaign?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 	},
 
 	openGalleryItem8: function(){
-		if(browserName=="Safari"){
 			app.showFrontPortfolioPanel_eighth();
 			console.log("Showing Safari-safe version of FrontPanel")
-
-		}
-		else{
-			frontPanel.src= "https://www.behance.net/gallery/80930803/NETFLIX-Christmas-Chronicles-Elf-Intros?iframe=1";
-			app.showFrontPortfolioPanel();
-			// $("#js-frontPortfolioPanel1").removeClass("hidden");
-		}
 
 	},
 
