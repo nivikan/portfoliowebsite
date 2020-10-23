@@ -46,7 +46,6 @@ var app = {
 
 	prePreload: function() {
 		if (!window.canLoad) return; //DONT LOAD ANYTHING IF BROWSER IS NOT SUPPORTED
-		//app.introPreload();
 		//app.initEvents();
 		console.log('PRE PRELOAD');
 
@@ -55,7 +54,8 @@ var app = {
 		// 	app.outroLoader();
 		// };
 
-		setTimeout(function () {app.outroLoader();}, 2000);
+		setTimeout(function () {app.outroLoader();}, 100);
+		app.introPreload();
 
 
 		//app.preIntroPreload(); //THIS IS CORRECT CALL
@@ -65,7 +65,7 @@ var app = {
 		app.initEvents(); //This Calls Scolling function that makes horizontal scroll happen
 		console.log("this is the Browser name: "+ browserName);
 		console.log("START");
-		app.introPreload();
+		
 	},
 
 	outroLoader:function(){
@@ -76,7 +76,7 @@ var app = {
 
 				.fromTo(
 					".loadingImage",
-					0.5,
+					0.1,
 					{ scale: 1, opacity: 1 },
 					{ scale: 10, opacity: 0, ease: Back.easeOut },
 					"init"
@@ -84,7 +84,7 @@ var app = {
 
 				.fromTo(
 					".loadingBarBG",
-					0.5,
+					0.1,
 					{ scale:1, opacity: 1 },
 					{ scale:0, opacity: 0 ,  ease: Back.easeOut },
 					"init"
@@ -92,7 +92,7 @@ var app = {
 				
 				.fromTo(
 					".loadingPage",
-					0.5,
+					0.1,
 					{ opacity: 1 },
 					{ opacity: 0, ease: Back.easeOut },
 					"init+=.1"
@@ -105,38 +105,7 @@ var app = {
 	introPreload: function() {
 	
 
-		if (app.isMobile){
-			var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
-			console.log("playing mobile intro anim");
-			preloaderTimeline
-
-				.fromTo(
-					".helloText",
-					0.5,
-					{ x: -30, opacity: 0 },
-					{ x: 0, opacity: 1, ease: Back.easeOut },
-					"init"
-				)
-
-				.fromTo(
-					".nameText",
-					0.5,
-					{ x:-100, opacity: 0 },
-					{ x:0, opacity: 1 ,  ease: Back.easeOut },
-					"init+=.2"
-				)
-				
-				.fromTo(
-					".meDescription",
-					0.5,
-					{ x: -30, opacity: 0 },
-					{ x: 0, opacity: 1, ease: Back.easeOut },
-					"init+=.4"
-				);
-
-		}
-
-		else{
+		if (app.isMobile != true){
 			var preloaderTimeline = new TimelineMax({onComplete: app.initPreload});
 			console.log("playing desktop intro anim");
 
@@ -171,6 +140,7 @@ var app = {
 					{ x:0, opacity: 1 ,  ease: Back.easeOut },
 					"init"
 				);
+
 		}
 
 		// //THIS IS A SEPARATE TIMELINE FOR THE ANIMATED TEXT
@@ -197,97 +167,104 @@ var app = {
 	},
 
 	introEndScreenAnim: function() {
-		var introEndArea = new TimelineMax({
-			onComplete: function() {
-				//app.showInstructions();
-			}
-		});
 
-		
-		introEndArea
-			.fromTo(
-				".endThankYouText",
-				0.5,
-				{ scale: 0, opacity: 0 },
-				{ scale: 1, opacity: 1, ease: Back.easeOut },
-				"init"
-			)
-			.fromTo(
-				".endAreaAvatar",
-				1,
-				{ rotation:100, scale: 0, opacity: 0 },
-				{ rotation:1, scale: 1, opacity: 1, ease: Back.easeOut },
-				"init+=.25"
-			)
-			.fromTo(
-				".endAreaEmail",
-				0.35,
-				{ y:20, opacity: 0 },
-				{ y:0, opacity: 1, ease: Back.easeOut },
-				"init+=.35"
-			)
-			.fromTo(
-				".endAreaResume",
-				0.25,
-				{ y:20, opacity: 0 },
-				{ y:0, opacity: 1, ease: Back.easeOut },
-				"init+=.55"
-			)
-			.fromTo(
-				".endLI",
-				0.2,
-				{ y:10, opacity: 0 },
-				{  y:0, opacity: 1, ease: Back.easeOut },
-				"init+=.55"
-			)
-			.fromTo(
-				".endIG",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.60"
-			)
+		if (app.isMobile != true){
 
-			.fromTo(
-				".endTW",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.65"
-			)
-
-			.fromTo(
-				".endTUM",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.70"
-			)
-
-			.fromTo(
-				".endGIT",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.75"
-			)
-
-			.fromTo(
-				".endMAIL",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.80"
-			)
-			.fromTo(
-				".endBE",
-				0.3,
-				{ y:10,opacity: 0 },
-				{ y:0,opacity: 1, ease: Back.easeIn },
-				"init+=.85"
-			)
+			var introEndArea = new TimelineMax({
+				onComplete: function() {
+					//app.showInstructions();
+				}
+			});
+	
 			
-			;
+			introEndArea
+				.fromTo(
+					".endThankYouText",
+					0.5,
+					{ scale: 0, opacity: 0 },
+					{ scale: 1, opacity: 1, ease: Back.easeOut },
+					"init"
+				)
+				.fromTo(
+					".endAreaAvatar",
+					1,
+					{ rotation:100, scale: 0, opacity: 0 },
+					{ rotation:1, scale: 1, opacity: 1, ease: Back.easeOut },
+					"init+=.25"
+				)
+				.fromTo(
+					".endAreaEmail",
+					0.35,
+					{ y:20, opacity: 0 },
+					{ y:0, opacity: 1, ease: Back.easeOut },
+					"init+=.35"
+				)
+				.fromTo(
+					".endAreaResume",
+					0.25,
+					{ y:20, opacity: 0 },
+					{ y:0, opacity: 1, ease: Back.easeOut },
+					"init+=.55"
+				)
+				.fromTo(
+					".endLI",
+					0.2,
+					{ y:10, opacity: 0 },
+					{  y:0, opacity: 1, ease: Back.easeOut },
+					"init+=.55"
+				)
+				.fromTo(
+					".endIG",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.60"
+				)
+	
+				.fromTo(
+					".endTW",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.65"
+				)
+	
+				.fromTo(
+					".endTUM",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.70"
+				)
+	
+				.fromTo(
+					".endGIT",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.75"
+				)
+	
+				.fromTo(
+					".endMAIL",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.80"
+				)
+				.fromTo(
+					".endBE",
+					0.3,
+					{ y:10,opacity: 0 },
+					{ y:0,opacity: 1, ease: Back.easeIn },
+					"init+=.85"
+				)
+				
+				;
+
+
+		}
+		
 	},
 
 
@@ -682,27 +659,7 @@ var app = {
 
 	onLoadProgress: function(url, itemsLoaded, itemsTotal) {
 
-		TweenLite.to(app, 1, {
-			loader: itemsLoaded / itemsTotal * 100,
-			roundProps: "loader",
-			onUpdate: function() {
-				var loader2 = itemsLoaded / itemsTotal * 100;
-				document.getElementById("js-preloader-percent").innerText =
-					loader2 + "%";
-
-				document.getElementById(
-					"js-circleLoader"
-				).style.strokeDashoffset =
-					4000 - loader2 * 6;
-				var deg = loader2 * 3.6;
-			},
-			onComplete: function() {
-				//app.init();
-				//app.outroPreload();
-			},
-			ease: Linear.easeNone,
-			z: 0.01
-		});
+		
 	},
 
 	onLoadEnd: function() {

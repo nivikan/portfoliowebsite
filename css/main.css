@@ -242,7 +242,7 @@ b {
 	overflow: hidden;
     position: absolute;
     width: 385vh;
-    height: 100vh;;
+    height: 100vh;
 	margin-left: 7vh;
 	pointer-events:none;
 	background-color:#000;
@@ -253,6 +253,8 @@ b {
 @media screen and (max-width: 600px) {
 	.screens {
 		margin-left: 0px;
+        width: 100%;
+        height: 480vh;
 	}
 }
 /* @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
@@ -401,6 +403,13 @@ b {
 
 }
 
+@media screen and (max-width: 600px) {
+	.pinkBG {
+		transform: rotate(-70deg);
+        transform-origin: 100% 50%;
+	}
+}
+
 .meImage{
 	-webkit-transform: translate3d( 0, 0, 0);
 	-moz-transform: translate3d( 0, 0, 0);
@@ -417,16 +426,18 @@ b {
 .meImage img{
 	width:47vh;
 	-webkit-filter: drop-shadow(30px 7px 0px #841240);
-  	filter: drop-shadow(30px 7px 0px #841240);
+	filter: drop-shadow(30px 7px 0px #841240);
+	left: 20vw;
+	top: 20vh;
 }
 
 @media screen and (max-width: 600px) {
 	.meImage {
-		bottom: -20vh;
-		left: 60vh;
+		top: 50vh;
+		left: 34vw;
 	}
 	.meImage img{
-		width: 55vh;
+		width: 45vh;
 		-webkit-filter: drop-shadow(-10px 7px 0px #841240);
 		filter: drop-shadow(-10px 7px 0px #841240);
 	}
@@ -445,7 +456,7 @@ b {
 
 @media screen and (max-width: 600px) {
 	.helloText {
-		top: 15vh;
+		top: 8vh;
 		left: 5vh;
 	}
 }
@@ -454,7 +465,7 @@ b {
 	position: absolute;
     top: 45.5vh;
     left: 48vh;
-    font-size: 11vh;
+    font-size: 11vw;
     line-height: 12vh;
     font-family: "Oswald";
 	font-weight: 600;
@@ -471,10 +482,10 @@ b {
 
 @media screen and (max-width: 600px) {
 	.nameText {
-		top: 20vh;
+		top: 14vh;
 		left: 4.2vh;
-		font-size: 13vh;
-		line-height: 13vh;
+		font-size: 25vw;
+		line-height: 25vw;
 	}
 }
 
@@ -512,11 +523,12 @@ b {
 
 @media screen and (max-width: 600px) {
 	.meDescription {
-		width: 40vh;
-		top: 48vh;
+		width: 29vh;
+		top: 40vh;
 		left: 5vh;
 		text-align: left;
-		font-size: 2.8vh;
+		font-size: 2vh;
+		margin-top: 6vw;
 	}
 }
 
@@ -542,13 +554,6 @@ b {
     padding: 2.5vh;
 	text-align: end;
 	display: -webkit-inline-box;
-}
-@media screen and (max-width: 600px) {
-	.introPortfolio {
-		left: 74vh;
-		height: 85vh;
-		top: 9vh;
-	}
 }
 
 
@@ -577,9 +582,42 @@ b {
     margin-top: -.5vh;
 }
 
+@media screen and (max-width: 600px) {
+	.introPortfolio {
+		left: 0vw;
+		height: 85vh;
+		width: 100vw;
+		top: 85vh;
+	}
+
+	.introPortfolio p{
+		margin: 0;
+		text-align: left;
+		width: auto;
+		left:0vw;
+		margin-left: 0;
+		
+	}
+	.introPortfolio svg{  /* This is the first arrow going into the portfolio section */
+		padding: 0;
+		margin: 0;
+		width: 7vh;
+		margin-top: -.5vh;
+		transform: rotate(90deg);
+	}
+}
+
+
+
 .galleryRow{
 	display: flex;
 	height: 50%;
+}
+
+@media screen and (max-width: 600px) {
+	.galleryRow {
+		display: block;
+	}
 }
 
 .gallery{
@@ -595,9 +633,11 @@ b {
 
 @media screen and (max-width: 600px) {
 	.gallery {
-		left: 120vh;
-		top: 8.5vh;
-		height: 82vh;
+		left: 0vw;
+		top: 105vh;
+		width: 100vw;
+		height: auto;
+		z-index: 20;
 	}
 }
 
@@ -612,10 +652,38 @@ b {
 
 
 }
+.galleryItem2{
+	width: 25%;
+    height: auto;
+    background-color: #282421;
+	margin: 1vh;
+	background-size: auto 100%;
+	background-position: center;
+	margin-bottom: 0;
+
+}
 
 @media screen and (max-width: 600px) {
 	.galleryItem {
-		background-size: 100% auto;
+		/* background-size: 100% auto; */
+		background-size: cover;
+		width: 100vw;
+		background-repeat: no-repeat;
+		margin: 0;
+		margin-bottom: 1vh;
+		height: 30vh;
+		background-color: black;
+
+	}
+	.galleryItem2 {
+		/* background-size: 100% auto; */
+		width: 100vw;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0;
+		margin-bottom: 1vh;
+		height: 30vh;
+		background-color: black;
 	}
 }
 
@@ -643,6 +711,38 @@ b {
 .item8{
 	background-image:url(../assets/img/portfolio/gallery/christmasChronicles.jpg);
 }
+
+
+@media screen and (max-width: 600px) {
+
+	.item1{
+		background-image:url(../assets/img/portfolio/gallery/GBWorld_mob.jpg);
+	}
+	.item2{
+		background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs_mob.jpg);
+	}
+	.item3{
+		background-image:url(../assets/img/portfolio/gallery/scaryStories_mob.jpg);
+	}
+	.item4{
+		background-image:url(../assets/img/portfolio/gallery/GBFranchise_mob.jpg);
+	}
+	.item5{
+		background-image:url(../assets/img/portfolio/gallery/dollface_mob.jpg);
+	}
+	.item6{
+		background-image:url(../assets/img/portfolio/gallery/theGreat_mob.jpg);
+	}
+	.item7{
+		background-image:url(../assets/img/portfolio/gallery/PPG_mob.jpg);
+	}
+	.item8{
+		background-image:url(../assets/img/portfolio/gallery/christmasChronicles_mob.jpg);
+	}
+	
+}
+
+
 
 .galleryItemOverlayInfo{
 	width: 100%;
@@ -737,9 +837,11 @@ b {
 }
 @media screen and (max-width: 600px) {
 	.endPortfolio {
-		left: 293.8vh;
+		left: 30vw;
+		bottom: auto;
+		top: 280vh;
+		left: 50vw;
 		height: 85vh;
-		bottom: 10vh;
 	}
 }
 
@@ -799,7 +901,10 @@ b {
 }
 @media screen and (max-width: 600px) {
 	.pinkBGEnd {
-		left: 344vh;
+		left: 100vw;
+		transform: rotate(-70deg);
+		transform-origin: 0% 100%;
+		bottom: -20vh;
 	}
 }
 
@@ -817,7 +922,9 @@ b {
 }
 @media screen and (max-width: 600px) {
 	.endAreaContent {
-		left: 332vh;
+		left: 0vw;
+		top: 395vh;
+		width: 100vw;
 	}
 }
 
@@ -829,9 +936,27 @@ b {
     font-family: Oswald;
 }
 
+@media screen and (max-width: 600px) {
+	.endThankYouText {
+		width: 60vw;
+		overflow-wrap: break-word;
+		/* white-space: break-spaces; */
+		white-space: pre-wrap;
+		line-height: 4vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .endAreaAvatar{
 	text-align: center;
     width: 50vh;
+}
+@media screen and (max-width: 600px) {
+	.endAreaAvatar {
+		width:100vw;
+	}
 }
 
 .endAreaEmail{
@@ -935,7 +1060,7 @@ b {
 	transform: translate(-50%);
 	margin-left: 50%;
 	margin-right: 50%;
-	z-index: 10;
+	z-index: 20;
 	overflow: inherit;
     pointer-events: all;
 
@@ -955,7 +1080,7 @@ b {
 	position: fixed;
     top: 3vh;
 	left: 7vw;
-    z-index: 20;
+    z-index: 30;
     /* margin-left: -5vh; */
     pointer-events: all;
     cursor: crosshair;
