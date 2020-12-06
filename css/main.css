@@ -43,7 +43,7 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	overflow: none !important;
+	overflow: none;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Yantramanav', sans-serif;
@@ -462,7 +462,7 @@ b {
 
 @media screen and (max-width: 600px) {
 	.helloText {
-		top: 8vh;
+		top: 5vh;
 		left: 5vh;
 	}
 }
@@ -488,7 +488,7 @@ b {
 
 @media screen and (max-width: 600px) {
 	.nameText {
-		top: 14vh;
+		top: 11vh;
 		left: 4.2vh;
 		font-size: 22vw;
 		line-height: 22vw;
@@ -529,8 +529,8 @@ b {
 
 @media screen and (max-width: 600px) {
 	.meDescription {
-		width: 29vh;
-		top: 40vh;
+		width: 24vh;
+		top: 35vh;
 		left: 5vh;
 		text-align: left;
 		font-size: 2vh;
@@ -1157,8 +1157,8 @@ b {
 @media screen and (max-width: 1300px) {
 	.frontPortfolioPanel {
 
-		width: 102vw;
-    	transform: translate(-53.4%);
+		width: 100vw;
+		left: 0;
 	}
 }
 
@@ -1182,10 +1182,10 @@ b {
 	.frontPortfolioPanelExit {
 		background-color: black;
 		padding: 4px;
-		top: 4vh;
-		left: 10vh;
-		height: 8vh;
-		width: 8vh;
+		top: 25px;
+		left: 25px;
+		height: 30px;
+		width: 30px;
 		-webkit-filter: drop-shadow(3px 3px 0px #ffdd12 );
 		filter: drop-shadow(3px 3px 0px #ffdd12);
 }
@@ -1198,10 +1198,10 @@ b {
 	.frontPortfolioPanelExit {
 		background-color: black;
 		padding: 4px;
-		top: 8vh;
-		left: 2vh;
-		height: 6vh;
-		width: 6vh;
+		top: 25px;
+		left: 25px;
+		height: 30px;
+		width: 30px;
 		-webkit-filter: drop-shadow(3px 3px 0px #ffdd12 );
   		filter: drop-shadow(3px 3px 0px #ffdd12);
 	}
