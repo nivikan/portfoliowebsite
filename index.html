@@ -46,17 +46,20 @@
 
 	
 	<!-- endinject -->
+
+
 	<!-- SCRIPTS -->
 	<script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="js/vendor/detectizr.js"></script>
+	<script src="js/lottie.js" type="text/javascript"></script>
 
 
 
 
 </head>
 
-<body>
+<body style="overflow:hidden">
 
 
 	<!-- AUDIO FOR ENTIRE SITE IS STORED HERE -->
@@ -121,9 +124,12 @@
 						<div>
 							<p id="js-meDescription" class="meDescription hoverEffectThis">I AM A <b>DEVELOPER, DESIGNER, GAMER</b>, & ALL-AROUND NERD MAKING ART AND BEING CREATIVE. HAVE A LOOK AROUND. CHEERS.</p>
 						</div>
-						<div>
-							<img src="assets/img/home/keepScrolling.png" alt="logo" />						
+
+						<div class="keepScroll"> <div class='keepScrollText'>CHECK OUT MY PORTFOLIO</div> <div class="bm" id = "bm"></div>
 						</div>
+						<!-- <div>
+							<img src="assets/img/home/keepScrolling.png" alt="logo" />						
+						</div> -->
 					</div>
 				</div>
 
@@ -137,15 +143,19 @@
 						<p>SELECTED<br>WORKS</p>
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill: #000000;}</style><polygon class="st0" points="29.3,12.7 70.9,52.6 29.3,87.2 "/></svg>
 					</div>
+					<div id = "js-mobileReel" class="mobileReel">
+						<iframe src="https://player.vimeo.com/video/485839661"frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+					</div>
+
 					<div id="js-gallery" class="gallery">
 						<div id = "js-galleryRow1" class="galleryRow">
 							<div id="js-galleryItem1" class="galleryItem item1" style="margin-top:0;">
 								<div id="js-galleryItemOverlayInfo1" class = "galleryItemOverlayInfo">
 										<div id="js-galleryItemText1" class= "galleryItemText">
-										<div id="js-galleryItemName1" class = "galleryItemName">GHOSTBUSTERS WORLD SOCIAL CAMPAIGN</div>
-										<div id="js-galleryItemClient1" class = "galleryItemClient">SONY</div>
+										<div id="js-galleryItemName1" class = "galleryItemName">MOTION REEL 2020</div>
+										<div id="js-galleryItemClient1" class = "galleryItemClient">Overview</div>
 										-----
-										<div id="js-galleryItemSkills1" class = "galleryItemSkills">ANIMATION & DESIGN</div>
+										<div id="js-galleryItemSkills1" class = "galleryItemSkills">MOTION & ANIMATION</div>
 									</div>
 								</div>
 							</div>
@@ -162,10 +172,10 @@
 							<div id="js-galleryItem3" class="galleryItem item3" style="margin-top:0;">
 								<div id="js-galleryItemOverlayInfo3" class = "galleryItemOverlayInfo">
 									<div id="js-galleryItemText3" class= "galleryItemText">
-										<div id="js-galleryItemName3" class = "galleryItemName">SCARY STORIES EPK WEBSITE</div>
-										<div id="js-galleryItemClient3" class = "galleryItemClient">CBS</div>
+										<div id="js-galleryItemName3" class = "galleryItemName">GHOSTBUSTERS WORLD SOCIAL CAMPAIGN</div>
+										<div id="js-galleryItemClient3" class = "galleryItemClient">SONY</div>
 										-----
-										<div id="js-galleryItemSkills3" class = "galleryItemSkills">DESIGN & ANIMATION</div>
+										<div id="js-galleryItemSkills3" class = "galleryItemSkills">ANIMATION & DESIGN</div>
 									</div>
 								</div>
 							</div>
@@ -301,7 +311,7 @@
 
 				<!-- FRONT PANELS -->
 
-				<div id="js-frontPortfolioPanelGroup" class = "frontPortfolioPanelGroup">
+				<div id="js-frontPortfolioPanelGroup" class = "frontPortfolioPanelGroup" loading="lazy">
 
 					<div  id="js-darkenPage" class = "darkenPage">
 
@@ -317,7 +327,7 @@
 
 					<!-- FRONT BEHANCE PANEL -->
 
-					<div id="js-frontPortfolioPanel1" class = "frontPortfolioPanel hidden">
+					<div id="js-frontPortfolioPanel1" class = "frontPortfolioPanel hidden" loading="lazy">
 						<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 141.4214%;">
 							<iframe id = "js-frontPaneliFrame" src="" style="border: 0; top: 0; left: 0; width: 100%; height: 95vh; position: absolute;" allowfullscreen>
 							</iframe>
@@ -328,10 +338,118 @@
 					<!-- FRONT BEHANCE PANEL -->
 
 
-					<!-- FRONT FIRST PANEL : SLIMER -->
+					<!-- FRONT FIRST PANEL : REEL 2020 -->
 
-					<div id="js-frontPortfolioPanel_first" class = "frontPortfolioPanel hidden">
+					<div id="js-frontPortfolioPanel_first" class = "frontPortfolioPanel hidden" loading="lazy">
 						<div class="portfolioBody bodyFirst">
+							<br><br><br><br><br>
+							<iframe src="https://player.vimeo.com/video/485839661" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<div class="projectText">
+								<div class="projectTitle">MOTION REEL</div>
+								<div class= "projectSubtitle">2020</div>
+								<div class="projectSummary"><b>00:05 </b>
+									Tobin’s Spirit Guide opening | Animated & Designed for Sony’s Mobile app, “Ghostbusters World”<br><br>
+									
+									<b>00:09</b>
+									Texting Animations | Animated & Designed for Hulu’s show, “Dollface”<br><br>
+									
+									<b>00:12</b>
+									Most onscreen was Animated & Designed by me aside from the bottom right corner which was Animated by me. <br><br>
+									
+									<b>00:14</b>
+									Pepe The frog Animations | Animated & Designed these Pepe the Frog Animations to promote the “Feels Good Man” Documentary<br><br>
+									
+									<b>00:20</b> 
+									Elle Fanning IG Stories | Animated and Designer for Hulu’s show, “The Great”<br><br>
+									
+									<b>00:28</b> 
+									Wall of Giphy Stickers | Animated & Designed all the stickers shown<br><br>
+									
+									<b>00:30 </b>
+									Title build animation | Animated<br><br>
+									
+									<b>00:32 </b>
+									Hello Kitty flying sequence | Animated & Designed <br><br>
+									
+									<b>00:24 </b>
+									Hello Kitty beating competition sequence | Animated & Designed<br><br>
+									
+									<b>00:37 </b>
+									Famous Franchise ‘Versus’ Sequences | Animated and Designed<br><br>
+									
+									<b>00:41 </b>
+									To car blasted | Animated and Designed<br><br>
+
+									<b>00:42 </b>
+									Animated the paper puppets to look “as life-like as possible”<br><br>
+									
+									<b>00:47 </b>
+									Twitter Animation | Modeled the birds, textured & rigged them, and Animated them all in blender<br><br><br>
+									
+									
+									<b>Audio Credit:</b>
+									Barbarian empire dub by Mastermind XS  
+									licensed under a Attribution-NonCommercial-NoDerivatives (aka Music Sharing) 3.0 International License.</div>
+							</div>
+							
+						</div>
+					</div>
+
+				<!-- FRONT SECOND PANEL : TOYS THAT MADE US -->
+
+					<div id="js-frontPortfolioPanel_second" class = "frontPortfolioPanel hidden" loading="lazy" style="background-color: #150F18;">
+						<div class="portfolioBody bodySecond">
+							<img class="imageTopIntro" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/17eacc80820957.5cec9d9b37294.png" alt="dripImage" /> 
+							<div class="projectText">
+								<div class="projectTitle" style="font-size:4vh">THE TOYS THAT MADE US ANIMATIONS</div>
+								<div class= "projectSubtitle">Netflix  |  Animations  |  Documentary |  2017-2018</div>
+								<div class="projectSummary">I had the immense please of working under Arthur Jones of Future Smells to create assets and animated segments for the Netflix original documentary: The Toys That Made Us. Starting from gathering images of retro TVs, Rifles, action figures, etc, I composed many of the animated segments from the show using photoshop and animated everything using Aftereffects- it truly was a multi step project. </div>
+							</div>
+							<div id = "lightgallery" class = "imageRow">
+								<img src="assets/img/portfolio/ttmu/1.jpg" alt="TV Set Composite 1" class="row_3Pieces" />
+								<img src="assets/img/portfolio/ttmu/2.jpg" alt="TV Set Composite 2" class="row_3Pieces" />
+								<img src="assets/img/portfolio/ttmu/3.jpg" alt="TV Set Composite 3" class="row_3Pieces" />
+							</div>
+							<div id = "lightgallery" class = "imageRow">
+								<img src="assets/img/portfolio/ttmu/4.jpg" alt="TV Set Composite 4" class="row_2Pieces" />
+								<img src="assets/img/portfolio/ttmu/5.jpg" alt="TV Set Composite 5" class="row_2Pieces" />
+							</div>
+
+							<div id = "lightgallery" class = "imageRow">
+								<img src="assets/img/portfolio/ttmu/6.jpg" alt="The Toys That Made Us Opening 1" class="row_3Pieces" />
+								<img src="assets/img/portfolio/ttmu/7.jpg" alt="The Toys That Made Us Opening 2" class="row_3Pieces"/>
+								<img src="assets/img/portfolio/ttmu/8.jpg" alt="The Toys That Made Us Opening 3" class="row_3Pieces"/>
+							</div>
+
+							<div id = "lightgallery" class = "imageRow" >
+								<img src="assets/img/portfolio/ttmu/9.gif" alt="Animations 1" class="row_2Pieces"/>
+								<img src="assets/img/portfolio/ttmu/10.gif" alt="Animations 2" class="row_2Pieces"/>
+							</div>
+							<div id = "lightgallery" class = "imageRow" >
+								<img src="assets/img/portfolio/ttmu/11.gif" alt="Animations 3" class="row_2Pieces"/>
+								<img src="assets/img/portfolio/ttmu/13.gif" alt="Animations 4" class="row_2Pieces"/>
+							</div>
+
+							<div id = "lightgallery" class = "imageRow" >
+								<img src="assets/img/portfolio/ttmu/12.gif" alt="Making Of 1" class="row_3Pieces"/>
+								<img src="assets/img/portfolio/ttmu/14.gif" alt="Making Of 2" class="row_3Pieces"/>
+								<img src="assets/img/portfolio/ttmu/15.gif" alt="Making Of 3" class="row_3Pieces"/>
+							</div>
+							<br>
+
+							<iframe src="https://player.vimeo.com/video/338784842" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+							<div class="moreInfoButton"> <a href="https://www.behance.net/gallery/80820957/NETFLIX-The-Toys-That-Made-Us-Animations"  target="_blank" >Click for more details about this project </a></div>
+							<div class="spaceAfterPortfolioPage"></div>
+
+							
+						</div>
+					</div>
+
+				<!-- FRONT THIRD PANEL : GBWORLD -->
+
+					<div id="js-frontPortfolioPanel_third" class = "frontPortfolioPanel hidden" loading="lazy">
+						<div class="portfolioBody bodyThird">
 							<img class="imageTopIntro" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d1b45c83482289.5d50510cd1af2.png" alt="dripImage" /> 
 
 							<iframe src="https://player.vimeo.com/video/353260415" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -393,107 +511,9 @@
 						</div>
 					</div>
 
-				<!-- FRONT SECOND PANEL : TOYS THAT MADE US -->
-
-					<div id="js-frontPortfolioPanel_second" class = "frontPortfolioPanel hidden" style="background-color: #150F18;">
-						<div class="portfolioBody bodySecond">
-							<img class="imageTopIntro" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/17eacc80820957.5cec9d9b37294.png" alt="dripImage" /> 
-							<div class="projectText">
-								<div class="projectTitle" style="font-size:4vh">THE TOYS THAT MADE US ANIMATIONS</div>
-								<div class= "projectSubtitle">Netflix  |  Animations  |  Documentary |  2017-2018</div>
-								<div class="projectSummary">I had the immense please of working under Arthur Jones of Future Smells to create assets and animated segments for the Netflix original documentary: The Toys That Made Us. Starting from gathering images of retro TVs, Rifles, action figures, etc, I composed many of the animated segments from the show using photoshop and animated everything using Aftereffects- it truly was a multi step project. </div>
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/ttmu/1.jpg" alt="TV Set Composite 1" class="row_3Pieces" />
-								<img src="assets/img/portfolio/ttmu/2.jpg" alt="TV Set Composite 2" class="row_3Pieces" />
-								<img src="assets/img/portfolio/ttmu/3.jpg" alt="TV Set Composite 3" class="row_3Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/ttmu/4.jpg" alt="TV Set Composite 4" class="row_2Pieces" />
-								<img src="assets/img/portfolio/ttmu/5.jpg" alt="TV Set Composite 5" class="row_2Pieces" />
-							</div>
-
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/ttmu/6.jpg" alt="The Toys That Made Us Opening 1" class="row_3Pieces" />
-								<img src="assets/img/portfolio/ttmu/7.jpg" alt="The Toys That Made Us Opening 2" class="row_3Pieces"/>
-								<img src="assets/img/portfolio/ttmu/8.jpg" alt="The Toys That Made Us Opening 3" class="row_3Pieces"/>
-							</div>
-
-							<div id = "lightgallery" class = "imageRow" >
-								<img src="assets/img/portfolio/ttmu/9.gif" alt="Animations 1" class="row_2Pieces"/>
-								<img src="assets/img/portfolio/ttmu/10.gif" alt="Animations 2" class="row_2Pieces"/>
-							</div>
-							<div id = "lightgallery" class = "imageRow" >
-								<img src="assets/img/portfolio/ttmu/11.gif" alt="Animations 3" class="row_2Pieces"/>
-								<img src="assets/img/portfolio/ttmu/13.gif" alt="Animations 4" class="row_2Pieces"/>
-							</div>
-
-							<div id = "lightgallery" class = "imageRow" >
-								<img src="assets/img/portfolio/ttmu/12.gif" alt="Making Of 1" class="row_3Pieces"/>
-								<img src="assets/img/portfolio/ttmu/14.gif" alt="Making Of 2" class="row_3Pieces"/>
-								<img src="assets/img/portfolio/ttmu/15.gif" alt="Making Of 3" class="row_3Pieces"/>
-							</div>
-							<br>
-
-							<iframe src="https://player.vimeo.com/video/338784842" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-							<div class="moreInfoButton"> <a href="https://www.behance.net/gallery/80820957/NETFLIX-The-Toys-That-Made-Us-Animations"  target="_blank" >Click for more details about this project </a></div>
-							<div class="spaceAfterPortfolioPage"></div>
-
-							
-						</div>
-					</div>
-
-				<!-- FRONT THIRD PANEL : SCARY STORIES TO TELL IN THE DARK -->
-
-					<div id="js-frontPortfolioPanel_third" class = "frontPortfolioPanel hidden" >
-						<div class="portfolioBody bodyThird">
-							<img class="imageTopIntro" src="assets/img/portfolio/scaryStories/0.png" alt="dripImage" /> 
-							<div class="projectText">
-								<div class="projectTitle" style="font-size:4vh">SCARY STORIES OFFICIAL EPK WEBSITE</div>
-								<div class= "projectSubtitle">CBS  |  Motion  |  Website |  2019</div>
-								<div class="projectSummary">Along with an amazing team of developers and senior designers, I lead the UI design of the "Scary Stories to Tell in The Dark" film website. I created mocks of the designs on photoshop keeping in mind the limitations our devs may have. I mocked up the intended motion of the site in AfterEffects- hover effects and transitions. Moreover, I designed and animated animations to be used as pop ups throughout the website.</div>
-							</div>
-							
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/1.gif" alt="Monsters 1" class="row_2Pieces" />
-								<img src="assets/img/portfolio/scaryStories/2.gif" alt="Monsters 2" class="row_2Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/3.gif" alt="Monsters 3" class="row_2Pieces" />
-								<img src="assets/img/portfolio/scaryStories/4.gif" alt="Monsters 4" class="row_2Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/5.gif" alt="Monsters 5" class="row_2Pieces" />
-								<img src="assets/img/portfolio/scaryStories/6.gif" alt="Monsters 6" class="row_2Pieces" />
-							</div>
-
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/7.jpg" alt="Website Image 1" class="row_1Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/8.jpg" alt="Website Image 2" class="row_1Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/9.jpg" alt="Website Image 3" class="row_1Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/10.jpg" alt="Website Image 4" class="row_1Pieces" />
-							</div>
-							<div id = "lightgallery" class = "imageRow">
-								<img src="assets/img/portfolio/scaryStories/11.jpg" alt="Website Image 5" class="row_1Pieces" />
-							</div>
-						
-							
-							<div class="moreInfoButton"> <a href="https://www.behance.net/gallery/86665201/CBS-FILMS-Scary-Stories-EPK-Website-UI-Design"  target="_blank" >Click for more details about this project </a></div>
-							<div class="spaceAfterPortfolioPage"></div>
-							
-						</div>
-					</div>
-
 				<!-- FRONT FOURTH PANEL : GHOSTBUSTERS-->
 
-				<div id="js-frontPortfolioPanel_fourth" class = "frontPortfolioPanel hidden">
+				<div id="js-frontPortfolioPanel_fourth" class = "frontPortfolioPanel hidden" loading="lazy">
 					<div class="portfolioBody bodyFourth">
 						<img class="imageTopIntro" src="assets/img/portfolio/ghostbusters/0.png" alt="dripImage" /> 
 						<div class="projectText">
@@ -578,7 +598,7 @@
 
 				<!-- FRONT FIFTH PANEL : DOLLFACE -->
 
-					<div id="js-frontPortfolioPanel_fifth" class = "frontPortfolioPanel hidden" style="background-color: #1f1f34;">
+					<div id="js-frontPortfolioPanel_fifth" class = "frontPortfolioPanel hidden" style="background-color: #1f1f34;" loading="lazy">
 						<div class="portfolioBody bodyFifth">
 							<img class="imageTopIntro" src="assets/img/portfolio/dollface/19.png" alt="dripImage" /> 
 							<div class="projectText">
@@ -631,33 +651,89 @@
 
 					<!-- FRONT SIXTH PANEL : THE GREAT -->
 
-					<div id="js-frontPortfolioPanel_sixth" class = "frontPortfolioPanel hidden" style="background-color: #1f1f34;">
+					<div id="js-frontPortfolioPanel_sixth" class = "frontPortfolioPanel hidden" style="background-color: #111" loading="lazy">
 						<div class="portfolioBody bodySixth">
-							<img class="imageTopIntro" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d1b51a86665201.5da03961a9fff.png" alt="dripImage" /> 
+							<img class="imageTopIntro" src="assets/img/portfolio/theGreat/1.png" alt="theGreatIntro" /> 
 							<div class="projectText">
 								<div class="projectTitle">THE GREAT </div>
 								<div class= "projectSubtitle">HULU  |  Motion  |  Design  |  2020</div>
-								<div class="projectSummary">I created the following designs at This is Tommy for Hulu's launch of "Dollface"- a highly anticipated show produced by Margot Robbie with a star studded cast.</div>
+								<div class="projectSummary">In 2020, I had the immense pleasure of leading the design work we did at Tommy promoting the launch of Hulu's critically acclaimed series "The Great." The show was an incredibly quirky period piece which relied on an amazing cast to delivery smart jokes and timely social commentary. To highlight this, our team created funny video pieces; sassy giphy stickers; and a plethora of off-the-beat social graphics to welcome audiences into the show's zany world. </div>
 							</div>
 
-							<img class = "imageSeparator" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1f6a0079195581.5ecaec11b975a.png" alt="SXSW Premiere Invite" />
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/giphyStickers.png" alt="gifStickerIntro" />
+								<div class="projectText">
+									<div class="projectSummary" style="color: #333">Below are a set of stickers I designed using green screen footage of the cast. Our amazing creative lead decided which sayings and scenes we should focus on and I designed and animated them on Photoshop and AfterEffects</div>
+								</div>
 							
+								<div id = "lightgallery" class = "imageRow">
+									<img src="assets/img/portfolio/theGreat/sticker1.gif" alt="sticker 1" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker2.gif" alt="sticker 2" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker3.gif" alt="sticker 3" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker4.gif" alt="sticker 4" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker5.gif" alt="sticker 5" class="row_5Pieces" />
+								</div>
+								<div id = "lightgallery" class = "imageRow">
+									<img src="assets/img/portfolio/theGreat/sticker6.gif" alt="sticker 6" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker7.gif" alt="sticker 7" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker8.gif" alt="sticker 8" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker9.gif" alt="sticker 9" class="row_5Pieces" />
+									<img src="assets/img/portfolio/theGreat/sticker10.gif" alt="sticker 10" class="row_5Pieces" />
+								</div>
+
+
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/BDayCallouts.png" alt="BdayIntro" />
+								<div class="projectText">
+									<div class="projectSummary" >Here is a set of Birthday wishes for the cast of 'The Great' which were posted on the show's social channels.</div>
+								</div>
+
+								<div id = "lightgallery" class = "imageRow">
+									<img src="assets/img/portfolio/theGreat/bday1.png" alt="sticker 1" class="row_3Pieces" />
+									<img src="assets/img/portfolio/theGreat/bday2.png" alt="sticker 2" class="row_3Pieces" />
+									<img src="assets/img/portfolio/theGreat/bday3.png" alt="sticker 3" class="row_3Pieces" />
+								</div>
+								<div id = "lightgallery" class = "imageRow">
+									<img src="assets/img/portfolio/theGreat/bday4.png" alt="sticker 1" class="row_3Pieces" />
+									<img src="assets/img/portfolio/theGreat/bday5.png" alt="sticker 2" class="row_3Pieces" />
+									<img src="assets/img/portfolio/theGreat/bday6.png" alt="sticker 3" class="row_3Pieces" />
+								</div>
+
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/PineterestPlanebreakers.png" alt="PinterestIntro" />
+
+								<div class="projectText">
+									<div class="projectSummary" >The video below displays two Pinterest ads I concepted and made in After effects. The ad is intended to, at first, look like it is part of the normal Pinterest UI but it is disrupted in the middle till the disguised ad itself is destroyed and replaced with something that looks more like a traditional ad.</div>
+								</div>
+								<iframe src="https://player.vimeo.com/video/479603725" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/SwipeUp.png" alt="SwipeUpIntro" />
+
+								<div class="projectText">
+									<div class="projectSummary">Our team was given a number of green screen and casual footage of cast members asking viewers to 'swipe up.' I cleaned up this footage to create engaging Instagram stories for the show.</div>
+								</div>
+								<iframe src="https://player.vimeo.com/video/479604272" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 							
-							<div id = "lightgallery" class = "imageRow">
-								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3b1d5679195581.5ecaec0fc3b81.png" alt="Monsters 1" class="row_2Pieces" />
-								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/52f17f79195581.5ecaec0fc453d.jpg" alt="Monsters 2" class="row_2Pieces" />
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/SomeFunnyBusiness.png" alt="storiesIntro" />
+
+								<div class="projectText">
+									<div class="projectSummary" >The below video is a compilation of narrative cuts I edited together to go on "The Great"'s social channels. The trick was to convey as much as possible within 15 seconds which is the time limit on Instagram stories. Each of these stories also has a 1x1 version for in-feed posts.</div>
+								</div>
+								<iframe src="https://player.vimeo.com/video/479604076" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							
+							<img class = "imageSeparator" src="assets/img/portfolio/theGreat/Expectations.png" alt="ExpectationVRoyaltyIntro" />
+
+								<div class="projectText">
+									<div class="projectSummary">The following videos were a group of Instagram stories our team at Tommy concepted which juxtaposes what is 'expected' in certain situations in the show with what actually happens. This was a challenging group of videos to design and edit since they needed to fit within the 15 second IG Story limit.</div>
+								</div>
+								<iframe src="https://player.vimeo.com/video/479604519" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							
+
+							<div id = "lightgallery" class = "imageRow" >
+								<img src="assets/img/portfolio/theGreat/Thanks.png" alt="Results" class="row_1Pieces"/>
 							</div>
 
-							<div id = "lightgallery" class = "imageRow">
-								<img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/37fee279195581.5ecaec11badad.png" alt="Monsters 1" class="row_1Pieces" />
-							</div>
-
-							<img class = "imageSeparator" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bedcd79195581.5ecaec11b9c92.png" alt="Animation Magazine Cover" />
 
 						
-						
 							
-							<div class="moreInfoButton"> <a href="https://www.behance.net/gallery/86665201/CBS-FILMS-Scary-Stories-EPK-Website-UI-Design"  target="_blank" >Click for more details about this project </a></div>
+							<div class="moreInfoButton"> <a href="https://www.behance.net/gallery/107488429/HULU-The-Great-Launch-Campaign"  target="_blank" >Click for more details about this project </a></div>
 							<div class="spaceAfterPortfolioPage"></div>
 							
 						</div>
@@ -666,7 +742,7 @@
 
 					<!-- FRONT SEVENTH PANEL : POWERPUFF GIRLS -->
 
-					<div id="js-frontPortfolioPanel_seventh" class = "frontPortfolioPanel hidden" style="background-color: #9CD9E3;">
+					<div id="js-frontPortfolioPanel_seventh" class = "frontPortfolioPanel hidden" style="background-color: #9CD9E3;" loading="lazy">
 						<div class="portfolioBody bodySeventh">
 							<img class="imageTopIntro" src="assets/img/portfolio/ppg/0.jpg" alt="Top Intro Image" /> 
 							<div class="projectText">
@@ -734,7 +810,7 @@
 
 					<!-- FRONT EIGHTH PANEL : CHRISTMAS CHRONICLES -->
 
-					<div id="js-frontPortfolioPanel_eighth" class = "frontPortfolioPanel hidden" style="background-color: #222120;">
+					<div id="js-frontPortfolioPanel_eighth" class = "frontPortfolioPanel hidden" style="background-color: #222120;" loading="lazy">
 						<div class="portfolioBody bodyEighth">
 							<img class="imageTopIntro" src="assets/img/portfolio/christmasChronicles/0.jpg" alt="Top Intro Image" /> 
 							<div class="projectText">
@@ -848,6 +924,10 @@
 	<script type="text/javascript" src="js/vendor/modal-video.min.js"></script>
 	<script type="text/javascript" src="js/vendor/stats.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/dkern/jquery.lazy@1.7.10/jquery.lazy.min.js"></script>	
+	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/dkern/jquery.lazy@1.7.10/jquery.lazy.plugins.min.js"></script>
+
 	<!-- endinject -->
 
 	

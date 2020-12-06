@@ -8,6 +8,14 @@ var browserName  = navigator.appName;
 var majorVersion = parseInt(navigator.appVersion,10);
 var tempNameOffset,tempVersionOffset,tempVersion;
 
+var animation = lottie.loadAnimation({
+	container: document.getElementById("bm"),
+	renderer: 'svg',
+	loop: true,
+	autoplay: true,
+	path: 'data.json'
+})
+
 if ((tempVersionOffset=navUserAgent.indexOf("Opera"))!=-1) {
 	browserName = "Opera";
 } 
@@ -54,7 +62,7 @@ var app = {
 		// 	app.outroLoader();
 		// };
 
-		setTimeout(function () {app.outroLoader();}, 100);
+		setTimeout(function () {app.outroLoader();}, 10);
 		app.introPreload();
 
 
@@ -612,6 +620,7 @@ var app = {
 			console.log ("Front not on");
 		}
 		else{
+			app.pauseAllVideos();
 			$("#js-frontPortfolioPanelExit").addClass("hidden");
 
 			$("#js-frontPortfolioPanel_first").addClass("hidden");
@@ -642,6 +651,13 @@ var app = {
 		
 
 
+	},
+
+	pauseAllVideos(){
+		$("iframe").each(function() { 
+			var src= $(this).attr('src');
+			$(this).attr('src',src);  
+		});
 	},
 
 
