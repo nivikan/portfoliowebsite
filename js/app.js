@@ -1,6 +1,4 @@
-var homeSlide1 = document.getElementById("js-homeSlideOne");
-var homeSlide2 = document.getElementById("js-homeSlideTwo");
-var homeSlide3 = document.getElementById("js-homeSlideThree");
+
 var prevScrollLeft = 0;
 var frontPanel = document.getElementById("js-frontPaneliFrame");
 var navUserAgent = navigator.userAgent;
