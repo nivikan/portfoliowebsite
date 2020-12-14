@@ -802,8 +802,9 @@ b {
 
 	.item1{
 		background-image:url(../assets/img/portfolio/gallery/motionReel_mob.jpg);
-		visibility: hidden;
+		/* visibility: hidden;
 		pointer-events: none;
+		z-index: 0; */
 
 	}
 	.item2{
