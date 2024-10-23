@@ -143,49 +143,6 @@ b {
 	pointer-events: none;
 }
 
-.loadingBarBG{
-	margin-top: 30.2vh;
-    /* margin-top: 50%; */
-    /* margin-bottom: 50%; */
-    position: fixed;
-    left: 43.28vw;
-    border: blue;
-    width: 18.3vw;
-    height: 18.3vw;
-    background-color: #841240;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-top: auto; */
-    border: 16px solid #841240;
-    border-radius: 50%;
-    border-top: 16px solid #ffdd12;
-   -webkit-animation:spin 2s linear infinite;
-    -moz-animation:spin 2s linear infinite;
-    animation:spin 2s linear infinite;
-
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); }
-}
-  
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-
-@media screen and (max-width: 600px) {
-	.loadingBarBG {
-
-		margin-top: 30.6vh;
-		width: 50vw;
-		height: 50vw;
-		left: 27.6vw;
-		
-	}
-}
 
 
 .loadingImage{
@@ -205,7 +162,7 @@ b {
 	}
 }
 
-}
+
 
 .loadingBarOutside{
 	width: 40vw;
