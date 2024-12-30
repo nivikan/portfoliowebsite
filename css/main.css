@@ -736,7 +736,7 @@ b {
 	background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs.jpg);
 }
 .item3{
-	background-image:url(../assets/img/portfolio/gallery/GBWorld.jpg);
+	background-image:url(../assets/img/portfolio/gallery/muppets.jpg);
 }
 .item4{
 	background-image:url(../assets/img/portfolio/gallery/GBFranchise.jpg);
@@ -748,10 +748,10 @@ b {
 	background-image:url(../assets/img/portfolio/gallery/theGreat.jpg);
 }
 .item7{
-	background-image:url(../assets/img/portfolio/gallery/PPG.jpg);
+	background-image:url(../assets/img/portfolio/gallery/invincible.jpg);
 }
 .item8{
-	background-image:url(../assets/img/portfolio/gallery/christmasChronicles.jpg);
+	background-image:url(../assets/img/portfolio/gallery/modok.jpg);
 }
 
 
@@ -768,7 +768,7 @@ b {
 		background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs_mob.jpg);
 	}
 	.item3{
-		background-image:url(../assets/img/portfolio/gallery/GBWorld_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/muppets_mob.jpg);
 	}
 	.item4{
 		background-image:url(../assets/img/portfolio/gallery/GBFranchise_mob.jpg);
@@ -780,10 +780,10 @@ b {
 		background-image:url(../assets/img/portfolio/gallery/theGreat_mob.jpg);
 	}
 	.item7{
-		background-image:url(../assets/img/portfolio/gallery/PPG_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/Invincible_mob.jpg);
 	}
 	.item8{
-		background-image:url(../assets/img/portfolio/gallery/christmasChronicles_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/modok_mob.jpg);
 	}
 	
 }
@@ -1262,6 +1262,7 @@ b {
 	padding-bottom: 2vh;
 	font-weight: 800;
 	opacity: .5;
+	
 
 
 }
@@ -1273,6 +1274,8 @@ b {
 }
 .projectSummary{
 	font-weight: 300;
+	display:block
+	
 }
 
 .imageSeparator{
