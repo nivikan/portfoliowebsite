@@ -486,11 +486,11 @@ b {
 
 @media screen and (max-width: 600px) {
 	.meDescription {
-		width: 24vh;
+		width: 28vh;
 		top: 35vh;
 		left: 5vh;
 		text-align: left;
-		font-size: 2vh;
+		font-size: 1.8vh;
 		margin-top: 6vw;
 	}
 }
@@ -739,7 +739,7 @@ b {
 	background-image:url(../assets/img/portfolio/gallery/muppets.jpg);
 }
 .item4{
-	background-image:url(../assets/img/portfolio/gallery/GBFranchise.jpg);
+	background-image:url(../assets/img/portfolio/gallery/google.jpg);
 }
 .item5{
 	background-image:url(../assets/img/portfolio/gallery/dollface.jpg);
@@ -751,7 +751,7 @@ b {
 	background-image:url(../assets/img/portfolio/gallery/invincible.jpg);
 }
 .item8{
-	background-image:url(../assets/img/portfolio/gallery/modok.jpg);
+	background-image:url(../assets/img/portfolio/gallery/visDirection.jpg);
 }
 
 
@@ -771,7 +771,7 @@ b {
 		background-image:url(../assets/img/portfolio/gallery/muppets_mob.jpg);
 	}
 	.item4{
-		background-image:url(../assets/img/portfolio/gallery/GBFranchise_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/google_mob.jpg);
 	}
 	.item5{
 		background-image:url(../assets/img/portfolio/gallery/dollface_mob.jpg);
@@ -783,7 +783,7 @@ b {
 		background-image:url(../assets/img/portfolio/gallery/Invincible_mob.jpg);
 	}
 	.item8{
-		background-image:url(../assets/img/portfolio/gallery/modok_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/visDirection_mob.jpg);
 	}
 	
 }
@@ -1236,6 +1236,7 @@ b {
     white-space: normal;
 	padding: 5vh;
 }
+
 @media screen and (max-width: 1300px) {
 	.projectText{
 		width: 100vw;
@@ -1277,6 +1278,26 @@ b {
 	display:block
 	
 }
+
+.projectText-Summary-NoSpace{
+	width: 80%;
+	color: white;
+	text-align: left;
+	display: inline-block;
+    white-space: normal;
+	padding: 1vh;
+	font-weight: 300;
+	display:block;
+	margin-left:10%;
+}
+@media screen and (max-width: 1300px) {
+	.projectText{
+		width: 90vw;
+		padding-top: 0;
+		margin-left:10vw;
+	}
+}
+
 
 .imageSeparator{
 	width: 100%;
