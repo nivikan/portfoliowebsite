@@ -1291,10 +1291,10 @@ b {
 	margin-left:10%;
 }
 @media screen and (max-width: 1300px) {
-	.projectText{
+	.projectText-Summary-NoSpace{
 		width: 90vw;
 		padding-top: 0;
-		margin-left:10vw;
+		margin-left:6vw;
 	}
 }
 
@@ -1352,6 +1352,15 @@ b {
 }
 .row_2Pieces{
 	width: 47.7%;
+}
+
+.row_4Pieces-VisDir{
+	width: 23%;
+}
+@media screen and (max-width: 600px) {
+	.row_4Pieces-VisDir {
+		width: 24%%;
+	}
 }
 
 
