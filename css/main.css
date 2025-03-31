@@ -730,60 +730,60 @@ b {
 }
 
 .item1{
-	background-image:url(../assets/img/portfolio/gallery/motionReel.jpg);
+	background-image:url(../assets/img/portfolio/gallery/motionReel.webp);
 }
 .item2{
-	background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs.jpg);
+	background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs.webp);
 }
 .item3{
-	background-image:url(../assets/img/portfolio/gallery/muppets.jpg);
+	background-image:url(../assets/img/portfolio/gallery/muppets.webp);
 }
 .item4{
-	background-image:url(../assets/img/portfolio/gallery/google.jpg);
+	background-image:url(../assets/img/portfolio/gallery/google.webp);
 }
 .item5{
-	background-image:url(../assets/img/portfolio/gallery/dollface.jpg);
+	background-image:url(../assets/img/portfolio/gallery/dollface.webp);
 }
 .item6{
-	background-image:url(../assets/img/portfolio/gallery/theGreat.jpg);
+	background-image:url(../assets/img/portfolio/gallery/theGreat.webp);
 }
 .item7{
-	background-image:url(../assets/img/portfolio/gallery/invincible.jpg);
+	background-image:url(../assets/img/portfolio/gallery/invincible.webp);
 }
 .item8{
-	background-image:url(../assets/img/portfolio/gallery/visDirection.jpg);
+	background-image:url(../assets/img/portfolio/gallery/visDirection.webp);
 }
 
 
 @media screen and (max-width: 600px) {
 
 	.item1{
-		background-image:url(../assets/img/portfolio/gallery/motionReel_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/motionReel_mob.webp);
 		/* visibility: hidden;
 		pointer-events: none;
 		z-index: 0; */
 
 	}
 	.item2{
-		background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/theToysThatMadeUs_mob.webp);
 	}
 	.item3{
-		background-image:url(../assets/img/portfolio/gallery/muppets_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/muppets_mob.webp);
 	}
 	.item4{
-		background-image:url(../assets/img/portfolio/gallery/google_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/google_mob.webp);
 	}
 	.item5{
-		background-image:url(../assets/img/portfolio/gallery/dollface_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/dollface_mob.webp);
 	}
 	.item6{
-		background-image:url(../assets/img/portfolio/gallery/theGreat_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/theGreat_mob.webp);
 	}
 	.item7{
-		background-image:url(../assets/img/portfolio/gallery/Invincible_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/Invincible_mob.webp);
 	}
 	.item8{
-		background-image:url(../assets/img/portfolio/gallery/visDirection_mob.jpg);
+		background-image:url(../assets/img/portfolio/gallery/visDirection_mob.webp);
 	}
 	
 }
