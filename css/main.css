@@ -252,8 +252,7 @@ b {
 	background-color: #050505;
 	font-family: 'Oswald', sans-serif;
 	z-index: 15;
-	padding-top: 10vh;
-    padding-bottom: 10vh;
+	padding-top: 25vh;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -957,11 +956,12 @@ b {
 .endAreaContent{
 	position: absolute;
     left: 320vh;
-    top: 16vh;
+    top: 20vh;
     z-index: 10;
     text-align: center;
     font-weight: 800;
-    font-size: 1.5vh;
+    font-size: 2vh;
+	line-height: 3vh;
     letter-spacing: .1vh;
     margin-top: auto;
     margin-bottom: auto;
@@ -998,6 +998,7 @@ b {
 .endAreaAvatar{
 	text-align: center;
     width: 50vh;
+	padding-top: 4vh;
 }
 @media screen and (max-width: 600px) {
 	.endAreaAvatar {
